@@ -1,0 +1,351 @@
+/* Start Globale Rules */
+* ,
+*::before ,
+*::after {
+    --webkit-box-sizing : border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;    
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+body::-webkit-scrollbar {
+    color: var(--alt-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color) ;
+}
+body::-webkit-scrollbar-track {
+    background-color: #eee ;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+
+/* End Globale Rules */
+
+/* Start Media Query Responsive Design */
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Media Query Responsive Design */
+
+/* Start Components */
+
+
+/* End Compounents */
+
+/* Start Variables */
+/* Do not Forget to Add the Fullback Value */
+:root {
+    --body-background-color: #f1f5f9;
+    --main-color: #2196f3;
+    --alt-color: #1787e0;
+    --section-color: #eee;
+    --body-text-color: #888;
+    --main-transition: 0.3s;
+}
+/* End Variables */
+
+/* =========================================================== */
+/* ============START STYLING FOR THE BODY SECTIONS============ */
+/* =========================================================== */
+
+/* Start Styling of The Dashboard */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--body-background-color);
+}
+/* End Styling of Main Dashboard */
+/* =========================================================== */
+/* Start Side-Bar */
+.side-bar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+    padding: 20px;
+    position:relative;
+    z-index: 2;
+}
+.side-bar h3 {
+    position: relative;
+    margin: 0 auto 55px;
+    width: fit-content;
+}
+.side-bar h3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    height: 2px;
+    width: 140%;
+    background-color: #000;
+}
+.side-bar h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -28px;
+    height: 20px;
+    width: 20px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background-color: #000;
+}
+.side-bar ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    
+}
+.side-bar ul li a {
+    color: #000;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 7px;
+    transition: var(--main-transition);
+}
+.side-bar ul li a:hover ,
+.side-bar ul li a.active {
+    background-color: #f6f6f6; 
+}
+.side-bar ul li i {
+    font-size: 14px;
+    margin-right: 5px;
+    width: 15px;
+}
+/* Start Side-Bar */
+/* =========================================================== */
+/* Start Main Dashboard  */
+.main {
+    width: 100%;
+}
+.main .header {
+    padding: 10px 15px;
+    min-height: 67px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -1px 0 8px -4px #aaa;
+}
+.main .header .search {
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .header .search i {
+    margin-top: 1px;
+    margin-right: 5px;
+    color: #777;
+    font-size: 14px;
+}
+.main .header .search input {
+    border: none;
+    font-size: 13px;
+    width: 115px;
+    transition: var(--main-transition);
+}
+.main .header .search input::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main .header .search input:focus {
+    outline: none;
+    width: 150px;
+}
+.main .header .search input:focus::placeholder {
+    opacity: 0;
+}
+.main .header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .header .logo i {
+    font-size: 20px;
+    margin-right: 15px;
+    position: relative
+}
+.main .header .logo i::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    top: -7px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.main .header .logo img{
+    width: 35px;
+}
+.main .content {
+    padding: 15px 20px;
+}
+.main .content h1 {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+.main .content h1::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #fff;
+    height: 3px;
+    width: 75%;
+}
+.main .content h1::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #000;
+    height: 3px;
+    width: 25%;
+}
+.main .content .section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+.main .content .section > div {
+    padding: 20px;
+    border-radius: 10px;
+}
+.main .welcome .head {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--section-color);
+}
+.main .welcome .head h3 {
+    font-size: 25px;
+    margin: 0;
+    position: relative;
+}
+.main .welcome .head h3::before {
+    content: "Elzero";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--body-text-color);
+    font-weight: normal;
+}
+.main .welcome .head img {
+    height: 100px;
+}
+.main .welcome .body {
+    background-color: #fff;
+}
+.main .welcome .body img {
+    width: 70px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+.main .welcome .button {
+    text-align: right;
+}
+.main .welcome .button a {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+.main .welcome .button a:hover {
+    background-color: var(--alt-color);
+}
+
+
+
+
+
+.main .quick-draft {
+    background-color: #fff;
+}
+.main .quick-draft h3 {
+    font-size: 25px;
+    margin: 0;
+}
+.main .quick-draft p {
+    color: var(--body-text-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.main .quick-draft form input ,
+.main .quick-draft form textarea {
+    display: block;
+    width: 100%;
+    background-color: var(--section-color);
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 15px 0;
+}
+.main .quick-draft form input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.main .quick-draft form textarea {
+    height: 200px;
+    resize: none;
+    font-family: monospace;
+    margin-bottom: 30px;
+}
+.main .quick-draft form input:focus ,
+.main .quick-draft form textarea:focus {
+    outline: none;
+}
+.main .quick-draft form .button {
+    text-align: right;
+}
+.main .quick-draft form .button a {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+.main .quick-draft form .button a:hover {
+    background-color: var(--alt-color);
+}
+/* End Main Dashboard  */
