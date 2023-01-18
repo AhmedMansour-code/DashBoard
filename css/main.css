@@ -244,15 +244,19 @@ a {
 .main .content .section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 .main .content .section > div {
-    padding: 20px;
     border-radius: 10px;
+}
+.main .welcome {
+    background-color: #fff;
+    overflow: hidden;
 }
 .main .welcome .head {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     background-color: var(--section-color);
 }
 .main .welcome .head h3 {
@@ -263,21 +267,57 @@ a {
 .main .welcome .head h3::before {
     content: "Elzero";
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
     color: var(--body-text-color);
     font-weight: normal;
+    font-size: 18px;
 }
 .main .welcome .head img {
     height: 100px;
 }
 .main .welcome .body {
-    background-color: #fff;
+    padding: 20px;
+    position: relative;
 }
 .main .welcome .body img {
     width: 70px;
     border: 4px solid #fff;
     border-radius: 50%;
+    position: absolute;
+    top: -35px;
+}
+.main .welcome .body .text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+}
+.main .welcome .body .text::before , 
+.main .welcome .body .text::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #eee;
+    width: calc(100% + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main .welcome .body .text::before {
+    top: -20px;
+}
+.main .welcome .body .text::after {
+    bottom: -20px;
+}
+.main .welcome .body .text p {
+    margin: 0 0 10px;
+}
+.main .welcome .body .text span {
+    color: var(--body-text-color);
+    font-size: 14px;
+    font-weight: 500;
 }
 .main .welcome .button {
     text-align: right;
@@ -293,13 +333,10 @@ a {
 .main .welcome .button a:hover {
     background-color: var(--alt-color);
 }
-
-
-
-
-
+/* ------------------------------------------------ */
 .main .quick-draft {
     background-color: #fff;
+    padding: 20px;
 }
 .main .quick-draft h3 {
     font-size: 25px;
