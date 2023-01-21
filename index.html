@@ -67,27 +67,27 @@
 <!-- =================================================== -->
         <!-- Start Main Dashboard  -->
         <div class="main">
-            <div class="header">
-                <div class="search">
+            <div class="header flex">
+                <div class="search flex">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="search" placeholder="Type A Keyword">
                 </div>
-                <div class="logo">
+                <div class="logo flex">
                     <i class="fa-regular fa-bell"></i>
                     <img src="images/avatar.png" alt="">
                 </div>
             </div>
             <div class="content">
                 <h1 class="section-heading">Dashboard</h1>
-                <div class="section">
+                <div class="section grid">
                     <div class="welcome">
-                        <div class="head">
-                            <h3>Welcome</h3>
+                        <div class="head flex dash-padding">
+                            <h3 class="dash-title">Welcome</h3>
                             <img src="images/welcome.png" alt="">
                         </div>
-                        <div class="body">
+                        <div class="body dash-padding">
                             <img src="images/avatar.png" alt="">
-                            <div class="text">
+                            <div class="text flex">
                                 <div>
                                     <p>Osama Elzero</p>
                                     <span>Developer</span>
@@ -106,9 +106,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="quick-draft">
-                        <h3>Quick Draft</h3>
-                        <p>Write A Draft For Your Ideas</p>
+                    <div class="quick-draft dash-padding">
+                        <h3 class="dash-title">Quick Draft</h3>
+                        <p class="dash-discrip">Write A Draft For Your Ideas</p>
                         <form action="">
                             <input type="text" name="title" placeholder="Title">
                             <textarea name="text-area" placeholder="Your Thoughts"></textarea>
@@ -117,32 +117,139 @@
                             </div>
                         </form>
                     </div>
-                    <div class="targets">
-                        <h3>Yearly Targets</h3>
-                        <p>Targets Of The Year</p>
-                        <div class="money">
-                            <i class="fa-solid fa-dollar-sign"></i>
+                    <div class="targets dash-padding">
+                        <h3 class="dash-title">Yearly Targets</h3>
+                        <p class="dash-discrip">Targets Of The Year</p>
+                        <div class="money flex">
+                            <i class="fa-solid fa-dollar-sign bg-clr-light-blue clr-blue"></i>
                             <div class="progress">
                                 <p>Money</p>
                                 <h4>$20.000</h4>
-                                <div class="bar"><span style="width: 80%" data-progress="80%"></span></div>
+                                <div class="bar bg-clr-light-blue"><span class="bg-clr-blue" style="width: 80%" data-progress="80%"></span></div>
                             </div>
                         </div>
-                        <div class="projects">
-                            <i class="fa-solid fa-code"></i>
+                        <div class="projects flex">
+                            <i class="fa-solid fa-code bg-clr-light-org clr-org"></i>
                             <div class="progress">
                                 <p>Projects</p>
                                 <h4>24</h4>
-                                <div class="bar"><span style="width: 55%" data-progress="55%"></span></div>
+                                <div class="bar bg-clr-light-org"><span class="bg-clr-org" style="width: 55%" data-progress="55%"></span></div>
                             </div>
                         </div>
-                        <div class="team">
-                            <i class="fa-solid fa-user"></i>
+                        <div class="team flex">
+                            <i class="fa-solid fa-user bg-clr-light-green clr-green"></i>
                             <div class="progress">
                                 <p>Team</p>
                                 <h4>12</h4>
-                                <div class="bar"><span style="width: 75%" data-progress="75%"></span></div>
+                                <div class="bar bg-clr-light-green"><span class="bg-clr-green" style="width: 75%" data-progress="75%"></span></div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="tickets dash-padding">
+                        <h3 class="dash-title">Tickets Statistics</h3>
+                        <p class="dash-discrip">Everything About Support Tickets</p>
+                        <div class="box flex">
+                            <div class="card total">
+                                <i class="fa-solid fa-money-check-dollar clr-org"></i>
+                                <p>2500</p>
+                                <span>Total</span>
+                            </div>
+                            <div class="card pending">
+                                <i class="fa-solid fa-spinner clr-blue"></i>
+                                <p>500</p>
+                                <span>Pending</span>
+                            </div>
+                            <div class="card circle">
+                                <i class="fa-regular fa-circle-check clr-green"></i>
+                                <p>1900</p>
+                                <span>Closed</span>
+                            </div>
+                            <div class="card deleted">
+                                <i class="fa-solid fa-square-xmark clr-red"></i>
+                                <p>100</p>
+                                <span>Deleted</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-news dash-padding">
+                        <h3 class="dash-title">Latest News</h3>
+                        <div class="news flex">
+                            <div class="topic flex">
+                                <img src="images/news-01.png" alt="">
+                                <div class="text">
+                                    <h4>Created SASS Section</h4>
+                                    <p>New SASS Examples & Tutorials</p>
+                                </div>
+                            </div>
+                            <span>3 Days Ago</span>
+                        </div>
+                        <div class="news flex">
+                            <div class="topic flex">
+                                <img src="images/news-02.png" alt="">
+                                <div class="text">
+                                    <h4>Changed The Design</h4>
+                                    <p>A Brand New Website Design</p>
+                                </div>
+                            </div>
+                            <span>5 Days Ago</span>
+                        </div>
+                        <div class="news flex">
+                            <div class="topic flex">
+                                <img src="images/news-03.png" alt="">
+                                <div class="text">
+                                    <h4>Team Increased</h4>
+                                    <p>3 Developers Joined The Team</p>
+                                </div>
+                            </div>
+                            <span>7 Days Ago</span>
+                        </div>
+                        <div class="news flex">
+                            <div class="topic flex">
+                                <img src="images/news-04.png" alt="">
+                                <div class="text">
+                                    <h4>Added Payment Gateway</h4>
+                                    <p>Many New Payment Gateways Added</p>
+                                </div>
+                            </div>
+                            <span>9 Days Ago</span>
+                        </div>
+                    </div>
+                    <div class="latest-tasks dash-padding">
+                        <h3 class="dash-title">Latest Tasks</h3>
+                        <div class="tasks flex">
+                            <div class="text">
+                                <h4>Record One New Video</h4>
+                                <p>Record Python Create Exe Project</p>
+                            </div>
+                            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                        <div class="tasks flex">
+                            <div class="text">
+                                <h4>Write Article</h4>
+                                <p>Write Low Level vs High Level Languages</p>
+                            </div>
+                            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                        <div class="tasks flex">
+                            <div class="text">
+                                <h4>Finish Project</h4>
+                                <p>Publish Academy Programming Project</p>
+                            </div>
+                            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                        <div class="tasks flex">
+                            <div class="text">
+                                <h4 class="deleted-item">Attend The Meeting</h4>
+                                <p class="deleted-item">Attend The Project Business Analysis Meeting</p>
+                            </div>
+                            <a href="" class="deleted-item"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                        <div class="tasks flex">
+                            <div class="text">
+                                <h4>Finish Lesson</h4>
+                                <p>Finish Teaching Flex Box</p>
+                            </div>
+                            <a href=""><i class="fa-regular fa-trash-can"></i></a>
                         </div>
                     </div>
                 </div>

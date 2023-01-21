@@ -59,10 +59,71 @@ a {
 }
 /* End Media Query Responsive Design */
 
-/* Start Components */
-
-
-/* End Compounents */
+/* Start Self Framework */
+.dash-title {
+    font-size: 25px;
+    margin: 0;
+}
+.dash-discrip {
+    color: var(--body-text-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.dash-padding {
+    padding: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid {
+    display: grid;
+}
+.clr-org {
+    color: #f59e0b;
+} 
+.bg-clr-org {
+    background-color: #f59e0b;
+}
+.clr-light-org {
+    color: #fdecce;
+} 
+.bg-clr-light-org {
+    background-color: #fdecce;
+}
+.clr-green {
+    color: #22c55e;
+} 
+.bg-clr-green {
+    background-color: #22c55e;
+}
+.clr-light-green {
+    color: #d3f3df;
+} 
+.bg-clr-light-green {
+    background-color: #d3f3df;
+}
+.clr-blue {
+    color: #0075ff;
+} 
+.bg-clr-blue {
+    background-color: #0075ff;
+}
+.clr-light-blue {
+    color: #cce3ff;
+} 
+.bg-clr-light-blue {
+    background-color: #cce3ff;
+}
+.clr-red {
+    color: #f44336;
+} 
+.deleted-item {
+    text-decoration: line-through;
+    opacity: 0.3
+}
+/* End Self Framework */
 
 /* Start Variables */
 /* Do not Forget to Add the Fullback Value */
@@ -82,9 +143,9 @@ a {
 
 /* Start Styling of The Dashboard */
 .dashboard {
-    display: flex;
     min-height: 100vh;
     background-color: var(--body-background-color);
+    display: flex;
 }
 /* End Styling of Main Dashboard */
 /* =========================================================== */
@@ -156,18 +217,12 @@ a {
     padding: 10px 15px;
     min-height: 67px;
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: -1px 0 8px -4px #aaa;
 }
 .main .header .search {
     border: 1px solid #aaa;
     padding: 10px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .main .header .search i {
     margin-top: 1px;
@@ -191,11 +246,6 @@ a {
 .main .header .search input:focus::placeholder {
     opacity: 0;
 }
-.main .header .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .main .header .logo i {
     font-size: 20px;
     margin-right: 15px;
@@ -204,7 +254,7 @@ a {
 .main .header .logo i::after {
     content: "";
     position: absolute;
-    background-color: red;
+    background-color: #f44336;
     top: -7px;
     right: -5px;
     width: 10px;
@@ -242,26 +292,21 @@ a {
     width: 25%;
 }
 .main .content .section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
 }
 .main .content .section > div {
     border-radius: 10px;
+    background-color: #fff;
 }
 .main .welcome {
-    background-color: #fff;
     overflow: hidden;
 }
 .main .welcome .head {
-    display: flex;
     justify-content: space-between;
-    padding: 20px;
     background-color: var(--section-color);
 }
 .main .welcome .head h3 {
-    font-size: 25px;
-    margin: 0;
     position: relative;
 }
 .main .welcome .head h3::before {
@@ -277,7 +322,6 @@ a {
     height: 100px;
 }
 .main .welcome .body {
-    padding: 20px;
     position: relative;
 }
 .main .welcome .body img {
@@ -288,9 +332,6 @@ a {
     top: -35px;
 }
 .main .welcome .body .text {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     text-align: center;
     margin: 50px 0;
     position: relative;
@@ -334,19 +375,6 @@ a {
     background-color: var(--alt-color);
 }
 /* ------------------------------------------------ */
-.main .quick-draft {
-    background-color: #fff;
-    padding: 20px;
-}
-.main .quick-draft h3 {
-    font-size: 25px;
-    margin: 0;
-}
-.main .quick-draft p {
-    color: var(--body-text-color);
-    font-weight: 500;
-    margin-bottom: 20px;
-}
 .main .quick-draft form input ,
 .main .quick-draft form textarea {
     display: block;
@@ -386,46 +414,17 @@ a {
     background-color: var(--alt-color);
 }
 /* ------------------------------------------------ */
-.main .targets {
-    background-color: #fff;
-    padding: 20px;
-}
-.main .targets h3 {
-    font-size: 25px;
-    margin: 0;
-}
-.main .targets > p {
-    color: var(--body-text-color);
-    font-weight: 500;
-    margin-bottom: 20px;
-}
 .main .targets > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     margin-bottom: 20px;
 }
 .main .targets > div > i {
     text-align: center;
-    background-color: green;
     margin-right: 15px;
     width: 80px;
     height: 80px;
     line-height: 80px;
     font-size: 22px;
     font-weight: bold;
-}
-.main .targets .money i {
-    background-color: #cce3ff;
-    color: #0075ff;
-}
-.main .targets .projects i {
-    background-color: #fdecce;
-    color: #f59e0b;
-}
-.main .targets .team i {
-    background-color: #d3f3df;
-    color: #22c55e;
 }
 .main .targets > div > div {
     flex: 1;
@@ -443,29 +442,11 @@ a {
     height: 4px;
     position: relative;
 }
-.main .targets .money .bar {
-    background-color: #cce3ff;
-}
-.main .targets .projects .bar {
-    background-color: #fdecce;
-}
-.main .targets .team .bar {
-    background-color: #d3f3df;
-}
 .main .targets > div > div .bar span {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-}
-.main .targets .money .bar span {
-    background-color: #0075ff;
-}
-.main .targets .projects .bar span {
-    background-color: #f59e0b;
-}
-.main .targets .team .bar span {
-    background-color: #22c55e;
 }
 .main .targets > div > div .bar span::before {
     content: attr(data-progress);
@@ -476,7 +457,7 @@ a {
     padding: 5px;
     font-size: 12px;
     border-radius: 7px;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 .main .targets .money .bar span::before {
     background-color: #0075ff;
@@ -503,5 +484,86 @@ a {
 }
 .main .targets .team .bar span::after {
     border-top-color: #22c55e;
+}
+/* ------------------------------------------------- */
+.main .tickets .box {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.main .tickets .box .card {
+    flex-basis: calc((100% - 20px) / 2);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.main .tickets .box .card i {
+    font-size: 30px;;
+}
+.main .tickets .box .card p {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.main .tickets .box .card span {
+    color: var(--body-text-color);
+    font-size: 13px;
+}
+/* ------------------------------------------------- */
+.main .content .latest-news h3 {
+    margin-bottom: 15px;
+}
+.main .content .latest-news .news {
+    padding: 20px 0;
+}
+.main .content .latest-news .news:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.main .content .latest-news .news .topic img {
+    width: 100px;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+.main .content .latest-news .news .topic .text h4 {
+    margin: 0;
+}
+.main .content .latest-news .news .topic .text p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--body-text-color);
+    font-weight: 500;   
+}
+.main .content .latest-news .news span {
+    font-size: 12px;
+    background-color: var(--section-color);
+    padding: 5px 10px ;
+    border-radius: 7px;
+    font-weight: 500;
+}
+/* ------------------------------------------------- */
+.main .content .latest-tasks h3 {
+    margin-bottom: 15px;
+}
+.main .content .latest-tasks .tasks {
+    padding: 15px 0;
+}
+.main .content .latest-tasks .tasks:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.main .content .latest-tasks .tasks .text h4 {
+    margin: 0;
+    font-size: 16px;
+}
+.main .content .latest-tasks .tasks .text p {
+    margin: 10px 0 0;
+    color: var(--body-text-color);
+    font-weight: 500;  
+} 
+.main .content .latest-tasks .tasks a {
+    color: #000;
+}
+.main .content .latest-tasks .tasks a:hover {
+    color: #f44336;
 }
 /* End Main Dashboard  */
