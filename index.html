@@ -23,42 +23,42 @@
             <ul>
                 <li><a href="#dashboard" class="active">
                     <i class="fa-regular fa-chart-bar"></i>
-                    Dashboard
+                    <span>Dashboard</span> 
                     </a>
                 </li>
                 <li><a href="#settings">
                     <i class="fa-solid fa-gear"></i>
-                    Settings
+                    <span>Settings</span>
                     </a>
                 </li>
                 <li><a href="#profile">
                     <i class="fa-regular fa-user"></i>
-                    Profile
+                    <span>Profile</span>
                     </a>
                 </li>
                 <li><a href="#projects">
                     <i class="fa-solid fa-diagram-project"></i>
-                    Projects
+                    <span>Projects</span>
                     </a>
                 </li>
                 <li><a href="#courses">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    Courses
+                    <span>Courses</span>
                     </a>
                 </li>
                 <li><a href="#friends">
                     <i class="fa-regular fa-circle-user"></i>
-                    Friends
+                    <span>Friends</span>
                     </a>
                 </li>
                 <li><a href="#files">
                     <i class="fa-solid fa-file"></i>
-                    Files
+                    <span>Files</span>
                     </a>
                 </li>
                 <li><a href="#plan">
                     <i class="fa-regular fa-credit-card"></i>
-                    Plan
+                    <span>Plan</span>
                     </a>
                 </li>
             </ul>
@@ -425,68 +425,93 @@
                 </div>
                 <div class="projects dash-padding">
                     <h3 class="dash-title">Projects</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Name</td>
-                                <td>Finish Date</td>
-                                <td>Client</td>
-                                <td>Price</td>
-                                <td>Team</td>
-                                <td>Status</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ministry Wikipedia</td>
-                                <td>10 May 2022</td>
-                                <td>Ministry</td>
-                                <td>$5300</td>
-                                <td>Ahmed</td>
-                                <td>pending</td>
-                            </tr>
-                            <tr>
-                                <td>Elzero Shop</td>
-                                <td>12 Oct 2021</td>
-                                <td>Elzero Company</td>
-                                <td>$1500</td>
-                                <td>Ahmed</td>
-                                <td>In Progress</td>
-                            </tr>
-                            <tr>
-                                <td>Bouba App</td>
-                                <td>05 Sep 2021</td>
-                                <td>Bouba</td>
-                                <td>$800</td>
-                                <td>Ahmed</td>
-                                <td>Completed</td>
-                            </tr>
-                            <tr>
-                                <td>Mahmoud Website</td>
-                                <td>22 May 2021</td>
-                                <td>Mahmoud</td>
-                                <td>$600</td>
-                                <td>Ahmed</td>
-                                <td>Completed</td>
-                            </tr>
-                            <tr>
-                                <td>Sayed Website</td>
-                                <td>24 May 2021</td>
-                                <td>Sayed</td>
-                                <td>$300</td>
-                                <td>Ahmed</td>
-                                <td>Rejected</td>
-                            </tr>
-                            <tr>
-                                <td>Arena Application</td>
-                                <td>01 Mar 2021</td>
-                                <td>Arena Company</td>
-                                <td>$2600</td>
-                                <td>Ahmed</td>
-                                <td>Completed</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="responsive-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Finish Date</td>
+                                    <td>Client</td>
+                                    <td>Price</td>
+                                    <td>Team</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ministry Wikipedia</td>
+                                    <td>10 May 2022</td>
+                                    <td>Ministry</td>
+                                    <td>$5300</td>
+                                    <td>
+                                        <img src="images/team-01.png" alt="">
+                                        <img src="images/team-02.png" alt="">
+                                        <img src="images/team-03.png" alt="">
+                                        <img src="images/team-05.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-org">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Elzero Shop</td>
+                                    <td>12 Oct 2021</td>
+                                    <td>Elzero Company</td>
+                                    <td>$1500</td>
+                                    <td>
+                                        <img src="images/team-01.png" alt="">
+                                        <img src="images/team-02.png" alt="">
+                                        <img src="images/team-05.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-blue">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bouba App</td>
+                                    <td>05 Sep 2021</td>
+                                    <td>Bouba</td>
+                                    <td>$800</td>
+                                    <td>
+                                        <img src="images/team-02.png" alt="">
+                                        <img src="images/team-03.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-green">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Mahmoud Website</td>
+                                    <td>22 May 2021</td>
+                                    <td>Mahmoud</td>
+                                    <td>$600</td>
+                                    <td>
+                                        <img src="images/team-01.png" alt="">
+                                        <img src="images/team-02.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-green">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sayed Website</td>
+                                    <td>24 May 2021</td>
+                                    <td>Sayed</td>
+                                    <td>$300</td>
+                                    <td>
+                                        <img src="images/team-01.png" alt="">
+                                        <img src="images/team-03.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-red">Rejected</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Arena Application</td>
+                                    <td>01 Mar 2021</td>
+                                    <td>Arena Company</td>
+                                    <td>$2600</td>
+                                    <td>
+                                        <img src="images/team-01.png" alt="">
+                                        <img src="images/team-02.png" alt="">
+                                        <img src="images/team-03.png" alt="">
+                                        <img src="images/team-04.png" alt="">
+                                    </td>
+                                    <td><span class="status bg-clr-green">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--alt-color) ;
 }
 body::-webkit-scrollbar-track {
-    background-color: #eee ;
+    background-color: #fff ;
 }
 ul {
     margin: 0;
@@ -119,6 +119,9 @@ a {
 .clr-red {
     color: #f44336;
 } 
+.bg-clr-red {
+    background-color: #f44336;
+} 
 .deleted-item {
     text-decoration: line-through;
     opacity: 0.3
@@ -182,10 +185,23 @@ a {
     position:relative;
     z-index: 2;
 }
+@media (max-width:767px) {
+    .side-bar {
+        width: fit-content;
+        padding: 10px;
+        text-align: center;
+    }
+}
 .side-bar h3 {
     position: relative;
     margin: 0 auto 55px;
     width: fit-content;
+}
+@media (max-width:767px) {
+    .side-bar h3 {
+        margin: 0 auto 15px;
+        font-size: 14px;
+    }
 }
 .side-bar h3::before {
     content: "";
@@ -209,10 +225,15 @@ a {
     border-radius: 50%;
     background-color: #000;
 }
+@media (max-width:767px) {
+    .side-bar h3::after , 
+    .side-bar h3::before {
+        display: none;
+    }
+}
 .side-bar ul li {
     margin-bottom: 5px;
     font-size: 14px;
-    
 }
 .side-bar ul li a {
     color: #000;
@@ -226,16 +247,27 @@ a {
 .side-bar ul li a.active {
     background-color: #f6f6f6; 
 }
+@media (max-width:767px) {
+    .side-bar ul li a span {
+        display: none;
+    }
+}
 .side-bar ul li i {
     font-size: 14px;
     margin-right: 5px;
     width: 15px;
+}
+@media (max-width:767px) {
+    .side-bar ul li i {
+        margin-right: 0;
+    }
 }
 /* Start Side-Bar */
 /* =========================================================== */
 /* Start Main Dashboard  */
 .main {
     width: 100%;
+    overflow: hidden;
 }
 .main .header {
     padding: 10px 15px;
@@ -291,6 +323,11 @@ a {
 .main .content {
     padding: 15px 20px;
 }
+@media (max-width:767px) {
+    .main .content {
+        padding: 15px 10px;
+    }
+}
 .main .content h1 {
     position: relative;
     margin-top: 10px;
@@ -316,17 +353,25 @@ a {
     width: 25%;
 }
 .main .content .section {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
+}
+@media (max-width:767px) {
+    .main .content .section {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
 }
 .main .content .section > div {
     border-radius: 10px;
     background-color: #fff;
 }
+/* ------------------------------------------------ */
 .main .welcome {
     overflow: hidden;
 }
 .main .welcome .head {
+    min-height: 140px;
     align-items: flex-start;
     background-color: var(--section-color);
 }
@@ -345,6 +390,11 @@ a {
 .main .welcome .head img {
     height: 100px;
 }
+@media (max-width: 767px){
+    .main .welcome .head img {
+        display: none;
+    }
+}
 .main .welcome .body {
     position: relative;
 }
@@ -355,10 +405,22 @@ a {
     position: absolute;
     top: -35px;
 }
+@media (max-width: 767px){
+    .main .welcome .body img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 .main .welcome .body .text {
     text-align: center;
     margin: 50px 0;
+    padding: 0 50px;
     position: relative;
+}
+@media (max-width: 767px){
+    .main .welcome .body .text {
+        flex-direction: column;
+    }
 }
 .main .welcome .body .text::before , 
 .main .welcome .body .text::after {
@@ -375,6 +437,11 @@ a {
 }
 .main .welcome .body .text::after {
     bottom: -20px;
+}
+@media (max-width: 767px){
+    .main .welcome .body .text > div:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }
 .main .welcome .body .text p {
     margin: 0 0 10px;
@@ -514,12 +581,22 @@ a {
     flex-wrap: wrap;
     gap: 20px;
 }
+@media (max-width: 767px) {
+    .main .tickets .box {
+        flex-direction: column;
+    }
+}
 .main .tickets .box .card {
     flex-basis: calc((100% - 20px) / 2);
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+}
+@media (max-width: 767px) {
+    .main .tickets .box .card {
+        width: 100%;
+    }
 }
 .main .tickets .box .card i {
     font-size: 30px;;
@@ -541,13 +618,31 @@ a {
 .main .content .latest-news .news {
     padding: 20px 0;
 }
+@media (max-width: 767px) {
+    .main .content .latest-news .news {
+        flex-direction: column;
+    }
+}
 .main .content .latest-news .news:not(:last-child) {
     border-bottom: 1px solid #eee;
+}
+@media (max-width: 767px) {
+    .main .content .latest-news .news .topic {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 .main .content .latest-news .news .topic img {
     width: 100px;
     border-radius: 7px;
     margin-right: 20px;
+}
+@media (max-width: 767px) {
+    .main .content .latest-news .news .topic img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 .main .content .latest-news .news .topic .text h4 {
     margin: 0;
@@ -850,6 +945,48 @@ a {
     border-radius: 10px;
 }
 .main .content .projects h3 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+.main .content .projects .responsive-table {
+    overflow-x: auto;
+}
+.main .content .projects table {
+    min-width: 1000px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    overflow: auto;
+}
+.main .content .projects table thead {
+    background-color: #eee;
+    font-weight: bold;
+}
+.main .content .projects td {
+    padding: 15px;
+    border: 1px solid #eee;
+}
+.main .content .projects table tbody td {
+    font-weight: 500;
+}
+.main .content .projects table tbody tr {
+    transition: var(--main-transition);
+}
+.main .content .projects table tbody tr:hover {
+    background-color: #faf7f7;
+}
+.main .content .projects tr td img {
+    width: 32px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.main .content .projects tr td img:not(:first-child) {
+    margin-left: -17px;
+}
+.main .content .projects tr td .status {
+    padding: 5px 10px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 13px;
+}
+
 /* End Main Dashboard  */
