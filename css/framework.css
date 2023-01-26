@@ -1,0 +1,98 @@
+/* Start My Framework */
+.dash-title {
+    font-size: 25px;
+    margin: 0;
+}
+.dash-discrip {
+    color: var(--body-text-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.dash-padding {
+    padding: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid {
+    display: grid;
+}
+.clr-org {
+    color: #f59e0b;
+} 
+.bg-clr-org {
+    background-color: #f59e0b;
+}
+.clr-light-org {
+    color: #fdecce;
+} 
+.bg-clr-light-org {
+    background-color: #fdecce;
+}
+.clr-green {
+    color: #22c55e;
+} 
+.bg-clr-green {
+    background-color: #22c55e;
+}
+.clr-light-green {
+    color: #d3f3df;
+} 
+.bg-clr-light-green {
+    background-color: #d3f3df;
+}
+.clr-blue {
+    color: #0075ff;
+} 
+.bg-clr-blue {
+    background-color: #0075ff;
+}
+.clr-light-blue {
+    color: #cce3ff;
+} 
+.bg-clr-light-blue {
+    background-color: #cce3ff;
+}
+.clr-red {
+    color: #f44336;
+} 
+.bg-clr-red {
+    background-color: #f44336;
+} 
+.deleted-item {
+    text-decoration: line-through;
+    opacity: 0.3
+}
+.bg-twitter {
+    background-color: #0075ff;
+}
+.bg-facebook {
+    background-color: #1877f2;
+}
+.bg-youtube {
+    background-color: #ff0000;
+}
+.bg-linkedin {
+    background-color: #0077b5;
+}
+.clr-twitter {
+    color: #0075ff;
+}
+.clr-facebook {
+    color: #1877f2;
+}
+.clr-youtube {
+    color: #ff0000;
+}
+.clr-linkedin {
+    color: #0077b5;
+}
+.mrg-btm-20 {
+    margin-bottom: 20px;
+}
+.mrg-btm-30 {
+    margin-bottom: 30px;
+}
+/* End My Framework */

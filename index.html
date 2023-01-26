@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- FontAwesone Library -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- Framework -->
+    <link rel="stylesheet" href="css/framework.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Google Fonts "Open sans" -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Start DashBoard page -->
     <div class="dashboard">
 <!-- =================================================== -->
-        <!-- Start Side Bar -->
+<!-- Start Side Bar -->
         <div class="side-bar">
             <h3>Elzero</h3>
             <ul>
@@ -26,47 +29,48 @@
                     <span>Dashboard</span> 
                     </a>
                 </li>
-                <li><a href="#settings">
+                <li><a href="settings.html">
                     <i class="fa-solid fa-gear"></i>
                     <span>Settings</span>
                     </a>
                 </li>
-                <li><a href="#profile">
+                <li><a href="profile.html">
                     <i class="fa-regular fa-user"></i>
                     <span>Profile</span>
                     </a>
                 </li>
-                <li><a href="#projects">
+                <li><a href="projects.html">
                     <i class="fa-solid fa-diagram-project"></i>
                     <span>Projects</span>
                     </a>
                 </li>
-                <li><a href="#courses">
+                <li><a href="courses.html">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span>Courses</span>
                     </a>
                 </li>
-                <li><a href="#friends">
+                <li><a href="friends.html">
                     <i class="fa-regular fa-circle-user"></i>
                     <span>Friends</span>
                     </a>
                 </li>
-                <li><a href="#files">
+                <li><a href="files.html">
                     <i class="fa-solid fa-file"></i>
                     <span>Files</span>
                     </a>
                 </li>
-                <li><a href="#plan">
+                <li><a href="plan.html">
                     <i class="fa-regular fa-credit-card"></i>
                     <span>Plan</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <!-- End Side Bar -->
+<!-- End Side Bar -->
 <!-- =================================================== -->
-        <!-- Start Main Dashboard  -->
+<!-- Start Main Dashboard  -->
         <div class="main">
+            <!-- Start Header -->
             <div class="header flex">
                 <div class="search flex">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -77,9 +81,15 @@
                     <img src="images/avatar.png" alt="">
                 </div>
             </div>
+            <!-- End Header -->
+            <!-- ======================================= -->
+            <!-- Start Content -->
             <div class="content">
+                <!-- ======================================= -->
+                <!-- Start Dashboard body -->
                 <h1 class="section-heading">Dashboard</h1>
                 <div class="section grid">
+                    <!-- Start Welcome -->
                     <div class="welcome">
                         <div class="head flex dash-padding">
                             <h3 class="dash-title">Welcome</h3>
@@ -106,6 +116,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Welcome -->
+                    <!-- =================================== -->
+                    <!-- Start Quick Draft -->
                     <div class="quick-draft dash-padding">
                         <h3 class="dash-title">Quick Draft</h3>
                         <p class="dash-discrip">Write A Draft For Your Ideas</p>
@@ -117,6 +130,9 @@
                             </div>
                         </form>
                     </div>
+                    <!-- End Quick Draft -->
+                    <!-- =================================== -->
+                    <!-- Start Targets -->
                     <div class="targets dash-padding">
                         <h3 class="dash-title">Yearly Targets</h3>
                         <p class="dash-discrip">Targets Of The Year</p>
@@ -145,6 +161,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Targets -->
+                    <!-- =================================== -->
+                    <!-- Start Tickets -->
                     <div class="tickets dash-padding">
                         <h3 class="dash-title">Tickets Statistics</h3>
                         <p class="dash-discrip">Everything About Support Tickets</p>
@@ -171,8 +190,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Tickets -->
+                    <!-- =================================== -->
+                    <!-- Start Latest News -->
                     <div class="latest-news dash-padding">
-                        <h3 class="dash-title">Latest News</h3>
+                        <h3 class="dash-title mrg-btm-20">Latest News</h3>
                         <div class="news flex">
                             <div class="topic flex">
                                 <img src="images/news-01.png" alt="">
@@ -214,8 +236,11 @@
                             <span>9 Days Ago</span>
                         </div>
                     </div>
+                    <!-- End Latest News -->
+                    <!-- =================================== -->
+                    <!-- Start Latest Tasks -->
                     <div class="latest-tasks dash-padding">
-                        <h3 class="dash-title">Latest Tasks</h3>
+                        <h3 class="dash-title mrg-btm-20">Latest Tasks</h3>
                         <div class="tasks flex">
                             <div class="text">
                                 <h4>Record One New Video</h4>
@@ -252,8 +277,11 @@
                             <a href=""><i class="fa-regular fa-trash-can"></i></a>
                         </div>
                     </div>
+                    <!-- End Latest Tasks -->
+                    <!-- =================================== -->
+                    <!-- Start Top Search -->
                     <div class="top-search dash-padding">
-                        <h3 class="dash-title">Top Search Items</h3>
+                        <h3 class="dash-title mrg-btm-20">Top Search Items</h3>
                         <div class=" title flex">
                             <p>Keyword</p>
                             <p>Search Count</p>
@@ -283,8 +311,11 @@
                             <span>95</span>
                         </div>
                     </div>
+                    <!-- End Top Search -->
+                    <!-- =================================== -->
+                    <!-- Start Latest Uploads -->
                     <div class="latest-uploads dash-padding">
-                        <h3 class="dash-title">Latest Uploads</h3>
+                        <h3 class="dash-title mrg-btm-20">Latest Uploads</h3>
                         <div class="uploads flex">
                             <div class="topic flex">
                                 <img src="images/pdf.svg" alt="">
@@ -346,8 +377,11 @@
                             <span>8.9 MB</span>
                         </div>                   
                     </div>
+                    <!-- End Latest Uploads -->
+                    <!-- =================================== -->
+                    <!-- Start latest Projects -->
                     <div class="latest-projects dash-padding">
-                        <h3 class="dash-title">Latest Projects Progress</h3>  
+                        <h3 class="dash-title mrg-btm-30">Latest Projects Progress</h3>  
                         <img class="proj-img" src="images/project.png" alt=""> 
                         <ul>
                             <li class="active-list">Got The Project</li>
@@ -357,8 +391,11 @@
                             <li>Finish The Project & Get Money</li>
                         </ul>         
                     </div>
+                    <!-- End Latest Projects  -->
+                    <!-- =================================== -->
+                    <!-- Start Reminders -->
                     <div class="reminders dash-padding">
-                        <h3 class="dash-title">Reminders</h3>
+                        <h3 class="dash-title mrg-btm-30">Reminders</h3>
                         <div class="remind remind-blue">
                             <h4>Check My Tasks List</h4>
                             <p>28/09/2022 - 12:00am</p>
@@ -376,8 +413,11 @@
                             <p>20/12/2022 - 12:00am</p>
                         </div>
                     </div>
+                    <!-- End Reminders -->
+                    <!-- =================================== -->
+                    <!-- Start Latest Posts -->
                     <div class="latest-posts dash-padding">
-                        <h3 class="dash-title">Latest Posts</h3>
+                        <h3 class="dash-title mrg-btm-30">Latest Posts</h3>
                         <div class="head">
                             <img src="images/avatar.png" alt="">
                             <div class="title">
@@ -399,8 +439,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Latest Posts -->
+                    <!-- =================================== -->
+                    <!-- Start Social Media -->
                     <div class="social-media dash-padding">
-                        <h3 class="dash-title">Social Media Stats</h3>
+                        <h3 class="dash-title mrg-btm-30">Social Media Stats</h3>
                         <div class="social flex twitter">
                             <i class="fa-brands fa-twitter bg-twitter"></i>
                             <p class="clr-twitter">90K Followers</p>
@@ -422,9 +465,14 @@
                             <a class="bg-linkedin" href="#">Follow</a>
                         </div>
                     </div>
+                    <!-- End Social Media -->
+                    <!-- =================================== -->
                 </div>
+                <!-- End Dashboard body -->
+                <!-- ======================================= -->
+                <!-- Start Project Table -->
                 <div class="projects dash-padding">
-                    <h3 class="dash-title">Projects</h3>
+                    <h3 class="dash-title mrg-btm-20">Projects</h3>
                     <div class="responsive-table">
                         <table>
                             <thead>
@@ -513,9 +561,14 @@
                         </table>
                     </div>
                 </div>
+                <!-- End Project Table -->
+                <!-- ======================================= -->
             </div>
+            <!-- End Content -->
         </div>
-        <!-- End Main Dashboard  -->
+<!-- End Main Dashboard  -->
+<!-- =================================================== -->
     </div>
+<!-- End DashBoard page -->
 </body>
 </html>
