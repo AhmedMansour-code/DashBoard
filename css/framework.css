@@ -1,4 +1,4 @@
-/* Start My Framework */
+/* Start component */
 .dash-title {
     font-size: 25px;
     margin: 0;
@@ -8,13 +8,19 @@
     font-weight: 500;
     margin-bottom: 20px;
 }
-.dash-padding {
-    padding: 20px;
-}
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.done-item {
+    text-decoration: line-through;
+    opacity: 0.3
+}
+/* End component */
+/* Start My Framework */
+.p-20 {
+    padding: 20px;
 }
 .grid {
     display: grid;
@@ -61,10 +67,6 @@
 .bg-clr-red {
     background-color: #f44336;
 } 
-.deleted-item {
-    text-decoration: line-through;
-    opacity: 0.3
-}
 .bg-twitter {
     background-color: #0075ff;
 }
@@ -96,3 +98,4 @@
     margin-bottom: 30px;
 }
 /* End My Framework */
+

@@ -66,8 +66,7 @@ a {
 .side-bar {
     width: 250px;
     background-color: #fff;
-    box-shadow: 0 0 10px #ddd;
-    padding: 20px;
+    box-shadow: 0 0 10px #ddd;  
     position:relative;
     z-index: 2;
 }
@@ -530,8 +529,9 @@ a {
 /* End Tickets */
 /* =========================================================== */
 /* Start Latest News */
-.main .content .latest-news .news {
-    padding: 20px 0;
+.main .content .latest-news .news:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 @media (max-width: 767px) {
     .main .content .latest-news .news {
@@ -578,11 +578,10 @@ a {
 /* End Latest News */
 /* =========================================================== */
 /* Start Latest Tasks */
-.main .content .latest-tasks .tasks {
-    padding: 15px 0;
-}
 .main .content .latest-tasks .tasks:not(:last-child) {
     border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 .main .content .latest-tasks .tasks .text h4 {
     margin: 0;
