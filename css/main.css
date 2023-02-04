@@ -42,8 +42,8 @@ a {
 /* Do not Forget to Add the Fullback Value */
 :root {
     --body-background-color: #f1f5f9;
-    --main-color: #2196f3;
-    --alt-color: #1787e0;
+    --main-color: #0075ff;
+    --alt-color: #0d69d5;
     --section-color: #eee;
     --body-text-color: #888;
     --main-transition: 0.3s;
@@ -160,13 +160,18 @@ a {
     overflow: hidden;
 }
 .main .header {
-    padding: 10px 15px;
+    padding: 10px 20px;
     min-height: 67px;
     background-color: #fff;
     box-shadow: -1px 0 8px -4px #aaa;
 }
+@media (max-width:767px) {
+    .main .header {
+        padding: 10px;
+    }
+}
 .main .header .search {
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     padding: 10px;
     border-radius: 10px;
 }
@@ -226,6 +231,7 @@ a {
     margin-top: 10px;
     margin-bottom: 40px;
     width: fit-content;
+    letter-spacing: -1.5px;
 }
 .main .content h1::before {
     content: "";
@@ -675,7 +681,7 @@ a {
 .main .content .latest-projects ul li::before {
     content: "";
     position: absolute;
-    left: -45px;
+    left: -46px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -692,7 +698,7 @@ a {
 .main .content .latest-projects ul li.blink-list::after {
     content: "";
     position: absolute;
-    left: -40px;
+    left: -41px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -917,3 +923,114 @@ a {
     font-size: 13px;
 }
 /* End Main Dashboard  */
+/* ================================================================= */
+/* ================================================================= */
+/* Start Styling For Setting Page */
+/* ------------------------------ */
+/* Start Site Control Widget */
+.main .content .site-control form textarea {
+    height: 150px;
+    resize: none;
+    border-color: #ccc;
+    padding: 10px;
+    font-family: monospace;
+}
+.main .content .site-control form textarea:focus {
+    outline: none;
+}
+/* End Site Control Widget */
+/* ================================================================= */
+/* Start General Info Widget */
+.main .content .general-info input {
+    border: 1px solid #ccc;
+}
+.main .content .general-info input:focus {
+    outline: none;
+}
+/* End General Info Widget */
+/* ================================================================= */
+/* Start Security Info Widget */
+
+
+/* End Security Info Widget */
+/* ================================================================= */
+/* Start Social Info Widget */
+.main .content .social-info div i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+    background-color: #f6f6f6;
+    padding: 10px;
+    color: grey;
+    transition: var(--main-transition);
+}
+.main .content .social-info div input[type=text] {
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+    border-radius: 0 6px 6px 0;
+    height: 40px
+}
+.main .content .social-info div input[type=text]:focus {
+    outline: none;
+}
+.main .content .social-info div:focus-within i {
+    color: #000
+}
+/* End Social Info Widget */
+/* ================================================================= */
+/* Start Widgets Control */
+.main .content .widgets-control input[type=checkbox] {
+    display: none;
+}
+.main .content .widgets-control input[type=checkbox] + label {
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+}
+.main .content .widgets-control input[type=checkbox] + label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -30px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+}
+.main .content .widgets-control input[type=checkbox]:hover + label::before {
+    border-color: var(--main-color);
+}
+.main .content .widgets-control input[type=checkbox] + label::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -21px;
+    width: 0;
+    height: 0;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+.main .content .widgets-control input[type=checkbox]:checked + label::after {
+    content: "✔";
+    top: 4px;
+    left: -30px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--main-color);
+    transform: rotate(1turn);
+}
+/* End Widgets Control */
+
+/* End Styling For Setting Page */
+/* ================================================================= */
+/* ================================================================= */

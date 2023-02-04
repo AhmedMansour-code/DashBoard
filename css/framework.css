@@ -17,13 +17,104 @@
     text-decoration: line-through;
     opacity: 0.3
 }
+.disabled-item {
+    background-color: #f1f5f9;
+}
+.disabled-item::placeholder {
+    opacity: 0.6;
+}
+.disabled-item:hover {
+    cursor: not-allowed;
+}
 /* End component */
+/* ------------------------------- */
 /* Start My Framework */
+
+/* Start Display */
+.grid {
+    display: grid;
+}
+.d-block {
+    display: block;
+}
+.w-100 {
+    width: 100%;
+}
+/* End Display */
+/* ------------------------------- */
+/* Start Border */
+.r-6 {
+    border-radius: 6px;
+}
+/* End Border */
+/* ------------------------------- */
+/* Start Margin & Padding */
+.p-10 {
+    padding: 10px;
+}
 .p-20 {
     padding: 20px;
 }
-.grid {
-    display: grid;
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+.mrg-btm-20 {
+    margin-bottom: 20px;
+}
+.mrg-btm-30 {
+    margin-bottom: 30px;
+}
+.m-0 {
+    margin: 0;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+/* End Margin & Padding */
+/* --------------------------------------- */
+/* Start Fonts (Size & Weight) */
+.f-13 {
+    font-size: 13px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-15 {
+    font-size: 15px;
+}
+.f-25 {
+    font-size: 25px;
+}
+.fw-n {
+    font-weight: normal;
+}
+.fw-500 {
+    font-weight: 500;
+}
+
+/* End Fonts (Size & Weight) */
+/* ---------------------------------------- */
+/* Start Colors */
+.c-gray {
+    color: gray;
 }
 .clr-org {
     color: #f59e0b;
@@ -91,11 +182,6 @@
 .clr-linkedin {
     color: #0077b5;
 }
-.mrg-btm-20 {
-    margin-bottom: 20px;
-}
-.mrg-btm-30 {
-    margin-bottom: 30px;
-}
+/* End Colors */
 /* End My Framework */
 
