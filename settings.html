@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Mansour | Front End Developer</title>
+    <title>Settings</title>
     <!-- Render All Element Normally -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- FontAwesone Library -->
@@ -100,7 +100,10 @@
                                 <h4 class="fw-500 m-0">Website Control</h4>
                                 <p class="f-13 c-gray mt-10">Open/Close Website And Type The Reason</p>
                             </div>
-                            <div></div>
+                            <label>
+                                <input type="checkbox" class="toggle-checkbox" checked>
+                                <div class="toggle-switch"></div>
+                            </label>
                         </div>
                         <form action="">
                             <textarea class="d-block w-100 r-6 f-13" name="" placeholder="Close Message Content"></textarea>
@@ -130,6 +133,30 @@
                     <div class="security-info p-20">
                         <h3 class="f-25 m-0">Security Info</h3>
                         <p class="c-gray fw-500 mb-30 f-15">Security Information About Your Account</p>
+                        <div class="info flex pb-30 mb-15 bb-eee">
+                            <div class="text">
+                                <h4 class="m-0 fw-500 mb-5">Password</h4>
+                                <span class="f-13 c-gray fw-500">Last Change On 25/10/2021</span>
+                            </div>
+                            <a href="" class="btn-shape bg-clr-blue c-white fw-500">Change</a>
+                        </div>
+                        <div class="info flex pb-30 mb-15 bb-eee">
+                            <div class="text">
+                                <h4 class="m-0 fw-500 mb-5">Two-Factor Authentication</h4>
+                                <span class="f-13 c-gray fw-500">Enable/Disable The Feature</span>
+                            </div>
+                            <label>
+                                <input type="checkbox" class="toggle-checkbox" checked>
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                        <div class="info flex pb-30">
+                            <div class="text">
+                                <h4 class="m-0 fw-500 mb-5">Devices</h4>
+                                <span class="f-13 c-gray fw-500">Check The Login Devices List</span>
+                            </div>
+                            <a href="" class="btn-shape fw-500 bg-eee c-black">Devices</a>
+                        </div>
                     </div>
                     <!-- End Security Info -->
                     <!-- =================================== -->
@@ -166,27 +193,27 @@
                         <form action="">
                             <div class="mb-15">
                                 <input type="checkbox" id="quick-draft" checked>
-                                <label class="fw-500" for="quick-draft">Quick draft</label>
+                                <label class="fw-500 ml-30" for="quick-draft">Quick draft</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="yearly-targets" checked>
-                                <label class="fw-500" for="yearly-targets">Yearly Targets</label>
+                                <label class="fw-500 ml-30" for="yearly-targets">Yearly Targets</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="tickets-stats" checked>
-                                <label class="fw-500" for="tickets-stats">Tickets Statistics</label>
+                                <label class="fw-500 ml-30" for="tickets-stats">Tickets Statistics</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="latest-news" checked>
-                                <label class="fw-500" for="latest-news">Latest News</label>
+                                <label class="fw-500 ml-30" for="latest-news">Latest News</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="latest-tasks">
-                                <label class="fw-500" for="latest-tasks">Latest Tasks</label>
+                                <label class="fw-500 ml-30" for="latest-tasks">Latest Tasks</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="top-search" checked>
-                                <label class="fw-500" for="top-search">Top Search Items</label>
+                                <label class="fw-500 ml-30" for="top-search">Top Search Items</label>
                             </div>
                         </form>
                     </div>
@@ -196,6 +223,20 @@
                     <div class="backup-manager p-20">
                         <h3 class="f-25 m-0">Backup Manager</h3>
                         <p class="c-gray fw-500 mb-30 f-15">Control Backup Time And Location</p>
+                        <form action="" class="mb-10 bb-eee">
+                            <div class="radio mb-15">
+                                <input type="radio" name="backup" id="daily" checked>
+                                <label for="daily" class="fw-500">Daily</label>
+                            </div>
+                            <div class="radio mb-15">
+                                <input type="radio" name="backup" id="weekly">
+                                <label for="weekly" class="fw-500">Weekly</label>
+                            </div>
+                            <div class="radio mb-15">
+                                <input type="radio" name="backup" id="monthly">
+                                <label for="monthly" class="fw-500">Monthly</label>
+                            </div>
+                        </form>
                     </div>
                     <!-- End Backup Manager -->
                 </div>

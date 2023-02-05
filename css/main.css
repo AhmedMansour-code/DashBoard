@@ -12,13 +12,13 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
 }
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     color: var(--alt-color);
 }
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: var(--alt-color) ;
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background-color: #fff ;
 }
 ul {
@@ -35,21 +35,59 @@ ul {
 a {
     text-decoration: none;
 }
-
 /* End Globale Rules */
-
+/* Start Component */
+.toggle-checkbox {
+    display: none;
+}
+.toggle-switch {
+    position: relative;
+    width: 78px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    font-family: "font awesome 6 free";
+    content: "\f00d";
+    font-weight: 900;
+    color: #aaa;
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+input.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--main-color);
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+    content:"\f00c";
+    color: var(--main-color);
+    left: 50px;
+}
+/* End component */
 /* Start Variables */
 /* Do not Forget to Add the Fullback Value */
 :root {
     --body-background-color: #f1f5f9;
     --main-color: #0075ff;
     --alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
     --section-color: #eee;
     --body-text-color: #888;
     --main-transition: 0.3s;
 }
 /* End Variables */
-
 /* =========================================================== */
 /* ============START STYLING FOR THE BODY SECTIONS============ */
 /* =========================================================== */
@@ -208,7 +246,7 @@ a {
 .main .header .logo i::after {
     content: "";
     position: absolute;
-    background-color: #f44336;
+    background-color: var(--red-color);
     top: -7px;
     right: -5px;
     width: 10px;
@@ -355,19 +393,10 @@ a {
 .main .content .welcome .body .text p {
     margin: 0 0 10px;
 }
-.main .content .welcome .body .text span {
-    color: var(--body-text-color);
-    font-size: 14px;
-    font-weight: 500;
-}
 .main .content .welcome .button {
     text-align: right;
 }
 .main .content .welcome .button a {
-    font-size: 14px;
-    padding: 5px 10px;
-    color: #fff;
-    border-radius: 10px;
     background-color: var(--main-color);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
@@ -380,25 +409,13 @@ a {
 /* End Welcome */
 /* =========================================================== */
 /* Start Quick Draft */
-.main .content .quick-draft form input ,
-.main .content .quick-draft form textarea {
-    display: block;
-    width: 100%;
-    background-color: var(--section-color);
-    border: none;
-    padding: 10px;
-    border-radius: 7px;
-    margin: 15px 0;
-}
 .main .content .quick-draft form input {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
 .main .content .quick-draft form textarea {
     height: 200px;
     resize: none;
-    font-family: monospace;
-    margin-bottom: 30px;
+    font-family: monospace;;
 }
 .main .content .quick-draft form input:focus ,
 .main .content .quick-draft form textarea:focus {
@@ -408,10 +425,6 @@ a {
     text-align: right;
 }
 .main .content .quick-draft form .button a {
-    font-size: 14px;
-    padding: 5px 10px;
-    color: #fff;
-    border-radius: 10px;
     background-color: var(--main-color);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
@@ -424,9 +437,6 @@ a {
 /* End Quick Draft */
 /* =========================================================== */
 /* Start Targets */
-.main .content .targets > div:not(:last-child) {
-    margin-bottom: 20px;
-}
 .main .content .targets > div > i {
     text-align: center;
     margin-right: 15px;
@@ -438,14 +448,6 @@ a {
 }
 .main .content .targets > div > div {
     flex: 1;
-}
-.main .content .targets > div > div p {
-    color: var(--body-text-color);
-    font-size: 14px;
-    margin: 0;
-}
-.main .content .targets > div > div h4 {
-    margin: 10px 0;
 }
 .main .content .targets > div > div .bar {
     width: 100%;
@@ -470,13 +472,13 @@ a {
     color: #fff;
 }
 .main .targets .money .bar span::before {
-    background-color: #0075ff;
+    background-color: var(--main-color);
 }
 .main .content .targets .projects .bar span::before {
-    background-color: #f59e0b;
+    background-color: var(--orange-color);
 }
 .main .content .targets .team .bar span::before {
-    background-color: #22c55e;
+    background-color: var(--green-color);
 }
 .main .content .targets > div > div .bar span::after {
     content: "";
@@ -484,16 +486,16 @@ a {
     border: 4px solid;
     border-color: transparent;
     right: -4px;
-    top: -11px;
+    top: -12px;
 }
 .main .content .targets .money .bar span::after {
-    border-top-color: #0075ff;
+    border-top-color: var(--main-color);
 }
 .main .content .targets .projects .bar span::after {
-    border-top-color: #f59e0b;
+    border-top-color: var(--orange-color);
 }
 .main .content .targets .team .bar span::after {
-    border-top-color: #22c55e;
+    border-top-color: var(--green-color);
 }
 /* End Quick Draft */
 /* =========================================================== */
@@ -510,8 +512,6 @@ a {
 .main .content .tickets .box .card {
     flex-basis: calc((100% - 20px) / 2);
     border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
     text-align: center;
 }
 @media (max-width: 767px) {
@@ -519,35 +519,13 @@ a {
         width: 100%;
     }
 }
-.main .content .tickets .box .card i {
-    font-size: 30px;;
-}
-.main .content .tickets .box .card p {
-    color: #000;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-.main .content .tickets .box .card span {
-    color: var(--body-text-color);
-    font-size: 13px;
-}
 /* End Tickets */
 /* =========================================================== */
 /* Start Latest News */
-.main .content .latest-news .news:not(:last-child) {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
 @media (max-width: 767px) {
     .main .content .latest-news .news {
         flex-direction: column;
     }
-}
-.main .content .latest-news .news:not(:last-child) {
-    border-bottom: 1px solid #eee;
-}
-@media (max-width: 767px) {
     .main .content .latest-news .news .topic {
         flex-direction: column;
         text-align: center;
@@ -556,8 +534,6 @@ a {
 }
 .main .content .latest-news .news .topic img {
     width: 100px;
-    border-radius: 7px;
-    margin-right: 20px;
 }
 @media (max-width: 767px) {
     .main .content .latest-news .news .topic img {
@@ -565,93 +541,23 @@ a {
         margin-bottom: 10px;
     }
 }
-.main .content .latest-news .news .topic .text h4 {
-    margin: 0;
-}
-.main .content .latest-news .news .topic .text p {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: var(--body-text-color);
-    font-weight: 500;   
-}
-.main .content .latest-news .news span {
-    font-size: 12px;
-    background-color: var(--section-color);
-    padding: 5px 10px ;
-    border-radius: 7px;
-    font-weight: 500;
-}
 /* End Latest News */
 /* =========================================================== */
 /* Start Latest Tasks */
-.main .content .latest-tasks .tasks:not(:last-child) {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-}
-.main .content .latest-tasks .tasks .text h4 {
-    margin: 0;
-    font-size: 16px;
-}
-.main .content .latest-tasks .tasks .text p {
-    margin: 10px 0 0;
-    color: var(--body-text-color);
-    font-weight: 500;  
-} 
 .main .content .latest-tasks .tasks a {
-    color: #000;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
 }
 .main .content .latest-tasks .tasks a:hover {
-    color: #f44336;
+    color: var(--red-color);
 }
 /* End Latest Tasks */
 /* =========================================================== */
-/* Start Top Search */
-.main .content .top-search .title p {
-    color: var(--body-text-color);
-    font-weight: 500;
-}
-.main .content .top-search .search {
-    margin-bottom: 5px;
-}
-.main .content .top-search .search p {
-    font-weight: 500;
-}
-.main .content .top-search .search span {
-    font-size: 12px;
-    background-color: var(--section-color);
-    padding: 5px 10px ;
-    border-radius: 7px;
-    font-weight: 500;
-}
-/* End Top Search */
-/* =========================================================== */
 /* Start Latest Uploads */
-.main .content .latest-uploads .uploads {
-    padding: 10px 0;
-}
-.main .content .latest-uploads .uploads:not(:last-child) {
-    border-bottom: 1px solid #eee;
-}
 .main .content .latest-uploads .uploads .topic img {
     width: 40px;
-    margin-right: 10px;
-}
-.main .content .latest-uploads .uploads .topic .text p {
-    margin: 0 0 5px;
-    font-weight: 500;   
-}
-.main .content .latest-uploads .uploads .topic .text span {
-    font-size: 15px;
-    color: var(--body-text-color);
-    font-weight: 500;
-}
-.main .content .latest-uploads .uploads > span {
-    font-size: 12px;
-    background-color: var(--section-color);
-    padding: 5px 10px ;
-    border-radius: 7px;
-    font-weight: 500;
 }
 /* End Latest Uploads */
 /* =========================================================== */
@@ -666,18 +572,22 @@ a {
     opacity: 0.1;
     width: 150px;
 }
+@media (max-width: 767px) {
+    .main .content .latest-projects .proj-img {
+        display: none;
+    }
+}
 .main .content .latest-projects ul {
-    margin-left: 15px;
-    padding: 0 30px;
-    border-left: 2px solid var(--alt-color);
+    border-left: 2px solid var(--main-color);
 }
 .main .content .latest-projects ul li {
-    font-weight: 500;
     position: relative;
 }
-.main .content .latest-projects ul li:not(:last-child) {
-    margin-bottom: 30px;
-}
+@media (max-width: 767px) {
+    .main .content .latest-projects ul li {
+        letter-spacing: -1px;
+    }
+} 
 .main .content .latest-projects ul li::before {
     content: "";
     position: absolute;
@@ -691,7 +601,7 @@ a {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid var(--alt-color);
+    border: 2px solid var(--main-color);
     background-color: #fff;
 }
 .main .content .latest-projects ul li.active-list::after ,
@@ -708,7 +618,7 @@ a {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--alt-color);
+    background-color: var(--main-color);
     z-index: 2;
 }
 .main .content .latest-projects ul li.blink-list::after {
@@ -729,23 +639,19 @@ a {
 .main .content .reminders .remind {
     position: relative;
     padding: 2px 15px;
-    margin-left: 30px;
     border-left: 2px solid;
 }
 .main .content .reminders .remind-blue {
-    border-color: #0075ff;
+    border-color: var(--main-color);
 }
 .main .content .reminders .remind-green {
-    border-color: #22c55e;
+    border-color: var(--green-color);
 }
 .main .content .reminders .remind-org {
-    border-color: #f59e0b;
+    border-color: var(--orange-color);
 }
 .main .content .reminders .remind-red {
-    border-color: #f44336;
-}
-.main .content .reminders .remind:not(:last-child) {
-    margin-bottom: 15px;
+    border-color: var(--red-color);
 }
 .main .content .reminders .remind:before {
     content: "";
@@ -762,26 +668,16 @@ a {
     border-radius: 50%;
 }
 .main .content .reminders .remind-blue::before {
-    background-color: #0075ff;
+    background-color: var(--main-color);
 }
 .main .content .reminders .remind-green::before {
-    background-color: #22c55e;
+    background-color: var(--green-color);
 }
 .main .content .reminders .remind-org::before {
-    background-color: #f59e0b;
+    background-color: var(--orange-color);
 }
 .main .content .reminders .remind-red::before {
-    background-color: #f44336;
-}
-.main .content .reminders .remind h4 {
-    margin: 0;
-    font-size: 14px;
-}
-.main .content .reminders .remind p {
-    margin: 10px 0 0;
-    font-size: 13px;
-    color: var(--body-text-color);
-    font-weight: 500;
+    background-color: var(--red-color);
 }
 /* End Reminders */
 /* =========================================================== */
@@ -792,35 +688,20 @@ a {
 }
 .main .content .latest-posts .head img {
     width: 50px;
-    margin-right: 20px;
-}
-.main .content .latest-posts .head .title h4 {
-    margin: 0;
-    font-size: 16px;
-}
-.main .content .latest-posts .head .title p {
-    margin: 10px 0 0;
-    color: var(--body-text-color);
-    font-weight: 500;  
 } 
-.main .content .latest-posts .body {
-    margin: 20px 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+@media (max-width: 767px) {
+    .main .content .latest-posts .body {
+        text-align: center;
+    }
 }
 .main .content .latest-posts .body p {
     line-height: 2;
-    font-weight: 500;
-}
-.main .content .latest-posts .footer {
-    color: var(--body-text-color)
 }
 /* End Latest Posts */
 /* =========================================================== */
 /* Start Social Media */
 .main .content .social-media .social {
     min-height: 50px;
-    background-color: #d2ecfc;
     padding: 0 20px 0 70px;
     position: relative;
 }
@@ -835,9 +716,6 @@ a {
 }
 .main .content .social-media .social.linkedin {
     background-color: rgb(0 119 181 / 20%);
-}
-.main .content .social-media .social:not(:last-child) {
-    margin-bottom: 15px;
 }
 .main .content .social-media .social i {
     position: absolute;
@@ -861,15 +739,6 @@ a {
     -o-transform: rotate(5deg);
     transform: rotate(5deg);
 }
-.main .content .social-media .social p {
-    font-weight: 500;
-}
-.main .content .social-media .social a {
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 7px;
-    font-size: 14px;
-}
 /* End Social Media */
 /* =========================================================== */
 /* Start Projects Table */
@@ -886,7 +755,6 @@ a {
     width: 100%;
     border-collapse: collapse;
     font-size: 15px;
-    overflow: auto;
 }
 .main .content .projects table thead {
     background-color: #eee;
@@ -916,13 +784,8 @@ a {
 .main .content .projects tr td img:not(:first-child) {
     margin-left: -17px;
 }
-.main .content .projects tr td .status {
-    padding: 5px 10px;
-    border-radius: 7px;
-    color: #fff;
-    font-size: 13px;
-}
 /* End Main Dashboard  */
+/* ================================================================= */
 /* ================================================================= */
 /* ================================================================= */
 /* Start Styling For Setting Page */
@@ -950,8 +813,16 @@ a {
 /* End General Info Widget */
 /* ================================================================= */
 /* Start Security Info Widget */
-
-
+.main .content .security-info .info:first-of-type button {
+    border: 1px solid var(--main-color);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.main .content .security-info .info:first-of-type a:hover {
+    background-color: var(--alt-color);
+}
 /* End Security Info Widget */
 /* ================================================================= */
 /* Start Social Info Widget */
@@ -967,6 +838,9 @@ a {
     background-color: #f6f6f6;
     padding: 10px;
     color: grey;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .main .content .social-info div input[type=text] {
@@ -988,9 +862,8 @@ a {
     display: none;
 }
 .main .content .widgets-control input[type=checkbox] + label {
-    cursor: pointer;
     position: relative;
-    margin-left: 30px;
+    cursor: pointer;
 }
 .main .content .widgets-control input[type=checkbox] + label::before {
     content: "";
@@ -1018,6 +891,9 @@ a {
     border-radius: 3px;
     font-size: 13px;
     text-align: center;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .main .content .widgets-control input[type=checkbox]:checked + label::after {
@@ -1027,10 +903,26 @@ a {
     width: 18px;
     height: 18px;
     border: 2px solid var(--main-color);
+    -webkit-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
     transform: rotate(1turn);
 }
 /* End Widgets Control */
-
+/* ================================================================= */
+/* Start Backup Manager */
+.main .content .backup-manager .radio input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+/* End Backup Manager */
 /* End Styling For Setting Page */
 /* ================================================================= */
 /* ================================================================= */
