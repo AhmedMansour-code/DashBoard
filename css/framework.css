@@ -9,12 +9,8 @@
     opacity: 0.3
 }
 .disabled-item {
-    background-color: #f1f5f9;
-}
-.disabled-item::placeholder {
-    opacity: 0.6;
-}
-.disabled-item:hover {
+    background-color: #f0f4f8;
+    color: #bbb;
     cursor: not-allowed;
 }
 .btn-shape {

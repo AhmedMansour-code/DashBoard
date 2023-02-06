@@ -26,17 +26,58 @@ ul {
     padding: 0;
     list-style: none;
 }
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
 a {
     text-decoration: none;
 }
 /* End Globale Rules */
+
 /* Start Component */
+/* Start Section Heading component
+-------------------------------- */
+.section-heading {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: fit-content;
+    letter-spacing: -1.5px;
+}
+.section-heading::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #fff;
+    height: 3px;
+    width: 75%;
+}
+.section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #000;
+    height: 3px;
+    width: 25%;
+}
+/* Start wrapper component
+------------------------ */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .wrapper {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+.wrapper > div {
+    border-radius: 10px;
+    background-color: #fff;
+}
+/* Start toggle-switch component
+------------------------------- */
 .toggle-checkbox {
     display: none;
 }
@@ -74,6 +115,7 @@ input.toggle-checkbox:checked + .toggle-switch {
     left: 50px;
 }
 /* End component */
+
 /* Start Variables */
 /* Do not Forget to Add the Fullback Value */
 :root {
@@ -89,7 +131,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 /* End Variables */
 /* =========================================================== */
-/* ============START STYLING FOR THE BODY SECTIONS============ */
+/* =========START STYLING FOR THE DASHBOARD SECTIONS========== */
 /* =========================================================== */
 
 /* Start DashBoard Page */
@@ -263,45 +305,6 @@ input.toggle-checkbox:checked + .toggle-switch {
     .main .content {
         padding: 15px 10px;
     }
-}
-.main .content h1 {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    width: fit-content;
-    letter-spacing: -1.5px;
-}
-.main .content h1::before {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    background-color: #fff;
-    height: 3px;
-    width: 75%;
-}
-.main .content h1::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    background-color: #000;
-    height: 3px;
-    width: 25%;
-}
-.main .content .section {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: 20px;
-}
-@media (max-width:767px) {
-    .main .content .section {
-        grid-template-columns: minmax(200px, 1fr);
-        gap: 10px;
-    }
-}
-.main .content .section > div {
-    border-radius: 10px;
-    background-color: #fff;
 }
 /* End Main Dashboard */
 /* =========================================================== */
@@ -785,17 +788,14 @@ input.toggle-checkbox:checked + .toggle-switch {
     margin-left: -17px;
 }
 /* End Main Dashboard  */
-/* ================================================================= */
-/* ================================================================= */
-/* ================================================================= */
-/* Start Styling For Setting Page */
-/* ------------------------------ */
+/* =========================================================== */
+/* ==========START STYLING FOR THE SETTINGS SECTIONS========== */
+/* =========================================================== */
 /* Start Site Control Widget */
 .main .content .site-control form textarea {
     height: 150px;
     resize: none;
     border-color: #ccc;
-    padding: 10px;
     font-family: monospace;
 }
 .main .content .site-control form textarea:focus {
@@ -810,11 +810,14 @@ input.toggle-checkbox:checked + .toggle-switch {
 .main .content .general-info input:focus {
     outline: none;
 }
+.main .content .general-info .email input {
+    display: inline-flex;
+    width: calc(100% - 80px);
+}
 /* End General Info Widget */
 /* ================================================================= */
 /* Start Security Info Widget */
-.main .content .security-info .info:first-of-type button {
-    border: 1px solid var(--main-color);
+.main .content .security-info .info:first-of-type a {
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
     -o-transition: var(--main-transition);
@@ -833,10 +836,9 @@ input.toggle-checkbox:checked + .toggle-switch {
     height: 40px;
     width: 40px;
     border: 1px solid #ccc;
-    border-radius: 6px 0 0 6px;
     border-right: none;
+    border-radius: 6px 0 0 6px;
     background-color: #f6f6f6;
-    padding: 10px;
     color: grey;
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
@@ -863,66 +865,129 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 .main .content .widgets-control input[type=checkbox] + label {
     position: relative;
+    padding-left: 30px;
     cursor: pointer;
+}
+.main .content .widgets-control input[type=checkbox] + label::before ,
+.main .content .widgets-control input[type=checkbox] + label::after {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
 }
 .main .content .widgets-control input[type=checkbox] + label::before {
     content: "";
-    position: absolute;
-    top: 4px;
-    left: -30px;
-    width: 18px;
-    height: 18px;
     background-color: #fff;
-    border: 2px solid #aaa;
-    border-radius: 3px;
+    border: 2px solid gray;
 }
 .main .content .widgets-control input[type=checkbox]:hover + label::before {
     border-color: var(--main-color);
 }
 .main .content .widgets-control input[type=checkbox] + label::after {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: -21px;
-    width: 0;
-    height: 0;
+    font-family: "font Awesome 6 free";
+    content: "\f00c";
     background-color: var(--main-color);
     color: #fff;
-    border-radius: 3px;
+    border: 2px solid var(--main-color);
     font-size: 13px;
-    text-align: center;
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
-    transition: var(--main-transition);
+    font-weight: bold;
+    -webkit-transform: scale(0) rotate(1turn);
+    -ms-transform: scale(0) rotate(1turn);
+    -moz-transform: scale(0) rotate(1turn);
+    -o-transform: scale(0) rotate(1turn);
+    transform: scale(0) rotate(1turn);
 }
 .main .content .widgets-control input[type=checkbox]:checked + label::after {
-    content: "✔";
-    top: 4px;
-    left: -30px;
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--main-color);
-    -webkit-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-    transform: rotate(1turn);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
 }
 /* End Widgets Control */
 /* ================================================================= */
 /* Start Backup Manager */
 .main .content .backup-manager .radio input[type=radio] {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 10px;
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
+    display: none;
+}
+.main .content .backup-manager .radio input[type=radio] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.main .content .backup-manager .radio input[type=radio] + label:before ,
+.main .content .backup-manager .radio input[type=radio] + label:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 0;
     transition: var(--main-transition);
+}
+.main .content .backup-manager .radio input[type=radio] + label:before {
+    background-color: #fff;
+    outline: 2px solid gray;
+}
+.main .content .backup-manager .radio input[type=radio]:checked + label:before {
+    outline-color: var(--main-color);
+}
+.main .content .backup-manager .radio input[type=radio] + label:after {
+    background-color: var(--main-color);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.main .content .backup-manager .radio input[type=radio]:checked + label:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.main .content .backup-manager .servers {
+    flex-wrap: wrap;
+}
+.main .content .backup-manager .servers > .serv-box {
+    width: calc((100% - 20px)/3);
+}
+@media (max-width: 767px) {
+    .main .content .backup-manager .servers > .serv-box {
+        width: 100%;
+    }
+    .main .content .backup-manager .servers > .serv-box:not(:last-child) {
+        margin-bottom: 15px; 
+    }
+}
+.main .content .backup-manager .servers .serv-box input[type=radio] {
+    display: none;
+}
+.main .content .backup-manager .servers .serv-box label {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.main .content .backup-manager .servers .serv-box input[type=radio]:checked + label {
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 /* End Backup Manager */
 /* End Styling For Setting Page */
-/* ================================================================= */
-/* ================================================================= */
+/* =========================================================== */
+/* ==========START STYLING FOR THE PROFILE SECTIONS=========== */
+/* =========================================================== */

@@ -14,10 +14,11 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Google Fonts "Open sans" -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></head>
 <body>
-<!-- Start Settings page -->
+<!-- Start Settings page [ sidebar + setting ] -->
     <div class="dashboard">
 <!-- =================================================== -->
 <!-- Start Side Bar -->
@@ -68,7 +69,7 @@
         </div>
 <!-- End Side Bar -->
 <!-- =================================================== -->
-<!-- Start Setting  -->
+<!-- Start Setting [the header + body] -->
         <div class="main">
             <!-- Start Header -->
             <div class="header flex">
@@ -83,22 +84,20 @@
             </div>
             <!-- End Header -->
             <!-- ======================================= -->
-            <!-- Start Content -->
+            <!-- Start Content [section-heading + body]-->
             <div class="content">
                 <!-- ======================================= -->
                 <!-- Start Setting body -->
                 <h1 class="section-heading">Settings</h1>
-                <div class="section grid">
+                <div class="wrapper">
                     <!-- Start Site Control -->
                     <div class="site-control p-20">
-                        <div class="mb-30">
-                            <h3 class="f-25 m-0">Site Control</h3>
-                            <p class="c-gray fw-500 f-15">Control The Website If There Is Maintenance</p>
-                        </div>
+                        <h3 class="f-25 m-0">Site Control</h3>
+                        <p class="c-gray fw-500 f-15 mb-30">Control The Website If There Is Maintenance</p>
                         <div class="flex mb-20">
                             <div class="text">
-                                <h4 class="fw-500 m-0">Website Control</h4>
-                                <p class="f-13 c-gray mt-10">Open/Close Website And Type The Reason</p>
+                                <p class="fw-500 m-0">Website Control</p>
+                                <span class="f-13 c-gray mt-10">Open/Close Website And Type The Reason</span>
                             </div>
                             <label>
                                 <input type="checkbox" class="toggle-checkbox" checked>
@@ -106,7 +105,7 @@
                             </label>
                         </div>
                         <form action="">
-                            <textarea class="d-block w-100 r-6 f-13" name="" placeholder="Close Message Content"></textarea>
+                            <textarea class="d-block w-100 r-6 f-13 p-10" name="" placeholder="Close Message Content"></textarea>
                         </form>
                     </div>
                     <!-- End Site Control -->
@@ -116,13 +115,13 @@
                         <h3 class="f-25 m-0">General Info</h3>
                         <p class="c-gray fw-500 mb-30 f-15">General Information About Your Account</p>
                         <form action="">
-                            <label for="" class="d-block mb-10 c-gray f-14 fw-500">Frist Name</label>
-                            <input class="w-100 r-6 mb-15 f-13 fw-500 p-10" type="text" placeholder="First Name">
-                            <label for="" class="d-block mb-10 c-gray f-14 fw-500">Last Name</label>
-                            <input class="w-100 r-6 mb-15 f-13 fw-500 p-10" type="text" placeholder="Last Name">
-                            <label for="" class="d-block mb-10 c-gray f-14 fw-500">Email</label>
-                            <div class="email flex">
-                                <input class="disabled-item w-100 mr-15 r-6 f-13 fw-500 p-10" type="email" placeholder="info@ahmed.com" disabled>
+                            <label for="first" class="d-block mb-10 c-gray f-14 fw-500">Frist Name</label>
+                            <input id="first" class="w-100 r-6 mb-15 f-13 fw-500 p-10" type="text" placeholder="First Name">
+                            <label for="last" class="d-block mb-10 c-gray f-14 fw-500">Last Name</label>
+                            <input id="last" class="w-100 r-6 mb-15 f-13 fw-500 p-10" type="text" placeholder="Last Name">
+                            <div class="email">
+                                <label for="mail" class="d-block mb-10 c-gray f-14 fw-500">Email</label>
+                                <input id="main" class="disabled-item mr-15 r-6 f-13 fw-500 p-10" type="email" placeholder="info@ahmed.com" disabled>
                                 <a class="clr-blue fw-500" href="">Change</a>
                             </div>
                         </form>
@@ -135,14 +134,14 @@
                         <p class="c-gray fw-500 mb-30 f-15">Security Information About Your Account</p>
                         <div class="info flex pb-30 mb-15 bb-eee">
                             <div class="text">
-                                <h4 class="m-0 fw-500 mb-5">Password</h4>
+                                <p class="m-0 fw-500 mb-5">Password</p>
                                 <span class="f-13 c-gray fw-500">Last Change On 25/10/2021</span>
                             </div>
                             <a href="" class="btn-shape bg-clr-blue c-white fw-500">Change</a>
                         </div>
                         <div class="info flex pb-30 mb-15 bb-eee">
                             <div class="text">
-                                <h4 class="m-0 fw-500 mb-5">Two-Factor Authentication</h4>
+                                <p class="m-0 fw-500 mb-5">Two-Factor Authentication</p>
                                 <span class="f-13 c-gray fw-500">Enable/Disable The Feature</span>
                             </div>
                             <label>
@@ -152,7 +151,7 @@
                         </div>
                         <div class="info flex pb-30">
                             <div class="text">
-                                <h4 class="m-0 fw-500 mb-5">Devices</h4>
+                                <p class="m-0 fw-500 mb-5">Devices</p>
                                 <span class="f-13 c-gray fw-500">Check The Login Devices List</span>
                             </div>
                             <a href="" class="btn-shape fw-500 bg-eee c-black">Devices</a>
@@ -193,27 +192,27 @@
                         <form action="">
                             <div class="mb-15">
                                 <input type="checkbox" id="quick-draft" checked>
-                                <label class="fw-500 ml-30" for="quick-draft">Quick draft</label>
+                                <label class="fw-500" for="quick-draft">Quick draft</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="yearly-targets" checked>
-                                <label class="fw-500 ml-30" for="yearly-targets">Yearly Targets</label>
+                                <label class="fw-500" for="yearly-targets">Yearly Targets</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="tickets-stats" checked>
-                                <label class="fw-500 ml-30" for="tickets-stats">Tickets Statistics</label>
+                                <label class="fw-500" for="tickets-stats">Tickets Statistics</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="latest-news" checked>
-                                <label class="fw-500 ml-30" for="latest-news">Latest News</label>
+                                <label class="fw-500" for="latest-news">Latest News</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="latest-tasks">
-                                <label class="fw-500 ml-30" for="latest-tasks">Latest Tasks</label>
+                                <label class="fw-500" for="latest-tasks">Latest Tasks</label>
                             </div>
                             <div class="mb-15">
                                 <input type="checkbox" id="top-search" checked>
-                                <label class="fw-500 ml-30" for="top-search">Top Search Items</label>
+                                <label class="fw-500" for="top-search">Top Search Items</label>
                             </div>
                         </form>
                     </div>
@@ -237,16 +236,40 @@
                                 <label for="monthly" class="fw-500">Monthly</label>
                             </div>
                         </form>
+                        <div class="servers flex mt-20">
+                            <div class="serv-box">
+                                <input type="radio" name="server" id="mega">
+                                <label for="mega">
+                                    <i class="fa-solid fa-server"></i>
+                                    <span class="mt-10 fw-500">Megaman</span>
+                                </label>
+                            </div>
+                            <div class="serv-box">
+                                <input type="radio" name="server" id="zero" checked>
+                                <label for="zero">
+                                    <i class="fa-solid fa-server"></i>
+                                    <span class="mt-10 fw-500">Zero</span>
+                                </label>
+                            </div>
+                            <div class="serv-box">
+                                <input type="radio" name="server" id="sigma">
+                                <label for="sigma">
+                                    <i class="fa-solid fa-server"></i>
+                                    <span class="mt-10 fw-500">Sigma</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <!-- End Backup Manager -->
+                    <!-- =================================== -->
                 </div>
                 <!-- End Settings body -->
             </div>
-            <!-- End Content -->
+            <!-- End Content [section-heading + body] -->
         </div>
-<!-- End Settings  -->
+<!-- End Settings [the header + body] -->
 <!-- =================================================== -->
     </div>
-<!-- End Settings page -->
+<!-- End Settings page [ sidebar + setting ] -->
 </body>
 </html>
