@@ -1,8 +1,19 @@
 /* Start component */
+.d-flex {
+    display: flex;
+}
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
 }
 .done-item {
     text-decoration: line-through;
@@ -63,6 +74,9 @@
 }
 .pt-10 {
     padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
 }
 .pr-30 {
     padding-right: 30px;
@@ -168,6 +182,9 @@
 }
 .bg-eee {
     background-color: #eee;
+}
+.bg-white {
+    background-color: white;
 }
 .clr-org {
     color: #f59e0b;

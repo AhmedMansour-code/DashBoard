@@ -991,3 +991,87 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* =========================================================== */
 /* ==========START STYLING FOR THE PROFILE SECTIONS=========== */
 /* =========================================================== */
+@media (max-width: 767px) {
+    .profile-widget {
+        flex-direction: column;
+    }
+}
+.profile-widget .profile-box {
+    width: 250px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .profile-widget .profile-box {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+.profile-widget .profile-box::after {
+    content:"" ;
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    background-color: #eee;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+    .profile-widget .profile-box::after {
+        display: none;
+    }
+}
+.profile-widget .profile-box img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.profile-widget .profile-box .stats {
+    width: 140px;
+    height: 5px;
+}
+.profile-widget .profile-box .stars .active-star {
+    color: #f59e0b;
+}
+.profile-toggle {
+    position: relative;
+    width: 78px;
+    height: 22px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.profile-toggle::before {
+    font-family: "font awesome 6 free";
+    content: "\f00d";
+    font-weight: 900;
+    font-size: 9px;
+    color: #aaa;
+    background-color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+input.toggle-checkbox:checked + .profile-toggle {
+    background-color: var(--main-color);
+}
+.toggle-checkbox:checked + .profile-toggle:before {
+    content:"\f00c";
+    color: var(--main-color);
+    left: 60px;
+}
+.profile-widget .info {
+    width: 100%;
+}
+.profile-widget .info .data {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 10px;
+}
