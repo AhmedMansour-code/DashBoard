@@ -1077,58 +1077,58 @@ input.toggle-checkbox:checked + .profile-toggle {
 }
 
 /* Start My Skills And Latest Activites Wrapper  */
-.skills-activities {
+.profile-page .skills-activities {
     gap: 20px;
     flex-wrap: wrap;
 }
 /* -------------------------------------------- */
 /* Start My Skills Widget */
-.skills {
+.profile-page .skills {
     flex-basis: 30%;
 }
 @media (max-width: 767px) {
-    .skills {
+    .profile-page .skills {
         flex-basis: 100%;
     }
 }
-.skills > .skills-box {
+.profile-page .skills > .skills-box {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
 }
 @media (max-width: 767px) {
-    .skills > .skills-box {
+    .profile-page .skills > .skills-box {
         justify-content: center;
     }
 }
 /* End My Skills Widget */
 /* -------------------------------------------- */
 /* Start Latest Activites Widget */
-.activities {
+.profile-page .activities {
     flex: 1; 
 }
-.activities .activity-box {
+.profile-page .activities .activity-box {
     gap: 10px;
 }
 @media (max-width: 767px) {
-    .activities .activity-box {
+    .profile-page .activities .activity-box {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
 }
-.activities .activity-box img {
+.profile-page .activities .activity-box img {
     width: 60px;
 }
-.activities .activity-box .text {
+.profile-page .activities .activity-box .text {
     flex-grow: 1;
 }
-.activities .activity-box .date {
+.profile-page .activities .activity-box .date {
     text-align: right;
 }
 @media (max-width: 767px) {
-    .activities .activity-box .date {
+    .profile-page .activities .activity-box .date {
         text-align: center;
     }
 }
