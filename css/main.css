@@ -785,7 +785,7 @@ input.toggle-checkbox:checked + .toggle-switch {
     border-radius: 50%;
 }
 .main .content .projects tr td img:not(:first-child) {
-    margin-left: -17px;
+    margin-left: -20px;
 }
 /* End Main Dashboard  */
 /* =========================================================== */
@@ -991,11 +991,14 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* =========================================================== */
 /* ==========START STYLING FOR THE PROFILE SECTIONS=========== */
 /* =========================================================== */
+/* Start Profile Widget */
 @media (max-width: 767px) {
     .profile-widget {
         flex-direction: column;
     }
 }
+/* --------------------------------------- */
+/* Start Profile Box  */
 .profile-widget .profile-box {
     width: 300px;
     position: relative;
@@ -1033,40 +1036,9 @@ input.toggle-checkbox:checked + .toggle-switch {
 .profile-widget .profile-box .stars .active-star {
     color: #f59e0b;
 }
-.profile-toggle {
-    position: relative;
-    width: 78px;
-    height: 22px;
-    background-color: #ccc;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.profile-toggle::before {
-    font-family: "font awesome 6 free";
-    content: "\f00d";
-    font-weight: 900;
-    font-size: 9px;
-    color: #aaa;
-    background-color: #fff;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--main-transition);
-}
-input.toggle-checkbox:checked + .profile-toggle {
-    background-color: var(--main-color);
-}
-.toggle-checkbox:checked + .profile-toggle:before {
-    content:"\f00c";
-    color: var(--main-color);
-    left: 60px;
-}
+/* End Profile Box  */
+/* --------------------------------------- */
+/* Start Info */
 .profile-widget .info {
     width: 100%;
 }
@@ -1075,7 +1047,22 @@ input.toggle-checkbox:checked + .profile-toggle {
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 10px;
 }
-
+.profile-widget .switch .toggle-switch {
+    width: 78px;
+    height: 22px;
+}
+.profile-widget .switch .toggle-switch::before {
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+}
+.profile-widget .switch .toggle-checkbox:checked + .toggle-switch:before {
+    left: 60px;
+}
+/* End Info */
+/* --------------------------------------- */
+/* End Profile Widget */
+/* ========================================================= */
 /* Start My Skills And Latest Activites Wrapper  */
 .profile-page .skills-activities {
     gap: 20px;
@@ -1135,3 +1122,62 @@ input.toggle-checkbox:checked + .profile-toggle {
 /* End Latest Activites Widget */
 /* -------------------------------------------- */
 /* End My Skills And Latest Activites Wrapper  */
+/* =========================================================== */
+/* ==========START STYLING FOR THE PROJECTS SECTIONS=========== */
+/* =========================================================== */
+/* Start Project widget */
+.project-widget {
+    position: relative;
+}
+.project-widget .date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.project-widget .users {
+    margin-top: 40px;
+}
+.project-widget .users img {
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.project-widget .users img:hover {
+    z-index: 1;
+}
+.project-widget .users img:not(:first-child) {
+    margin-left: -20px;
+}
+.project-widget .skills {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+@media (max-width: 767px) {
+    .project-widget .skills {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .project-widget .rating {
+        flex-direction: column;
+    }
+}
+.project-widget .rating {
+    gap: 10px;
+}
+@media (max-width: 767px) {
+    .project-widget .rating {
+        flex-direction: column;
+    }
+}
+.project-widget .rating .progress-bar {
+    height: 8px;
+    width: 250px;
+}
+/* End Project widget */
+/* =========================================================== */
+/* ==========START STYLING FOR THE COURSES SECTIONS=========== */
+/* =========================================================== */
