@@ -1181,3 +1181,49 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* =========================================================== */
 /* ==========START STYLING FOR THE COURSES SECTIONS=========== */
 /* =========================================================== */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .courses {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+.courses .course-widget {
+    position: relative;
+    overflow: hidden;
+}
+.courses .course-widget .avatar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 65px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.courses .course-widget .text {
+    position: relative;
+    padding-bottom: 40px;
+}
+.courses .course-widget .text::after {
+    content: "Course Info";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50% , 50%);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: var(--main-color);
+    
+}
+.courses .course-widget .text p {
+    line-height: 1.5;
+}
+/* =========================================================== */
+/* ==========START STYLING FOR THE FRIENDS SECTIONS=========== */
+/* =========================================================== */
