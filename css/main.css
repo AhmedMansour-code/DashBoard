@@ -131,7 +131,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 /* End Variables */
 /* =========================================================== */
-/* =========START STYLING FOR THE DASHBOARD SECTIONS========== */
+/* =========START STYLING FOR THE DASHBOARD PAGE========== */
 /* =========================================================== */
 
 /* Start DashBoard Page */
@@ -789,7 +789,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 /* End Main Dashboard  */
 /* =========================================================== */
-/* ==========START STYLING FOR THE SETTINGS SECTIONS========== */
+/* ==========START STYLING FOR THE SETTINGS PAGE========== */
 /* =========================================================== */
 /* Start Site Control Widget */
 .main .content .site-control form textarea {
@@ -989,7 +989,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* End Backup Manager */
 /* End Styling For Setting Page */
 /* =========================================================== */
-/* ==========START STYLING FOR THE PROFILE SECTIONS=========== */
+/* ==========START STYLING FOR THE PROFILE PAGE=========== */
 /* =========================================================== */
 /* Start Profile Widget */
 @media (max-width: 767px) {
@@ -1123,7 +1123,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* -------------------------------------------- */
 /* End My Skills And Latest Activites Wrapper  */
 /* =========================================================== */
-/* ==========START STYLING FOR THE PROJECTS SECTIONS=========== */
+/* ==========START STYLING FOR THE PROJECTS PAGE=========== */
 /* =========================================================== */
 /* Start Project widget */
 .project-widget {
@@ -1179,7 +1179,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 /* End Project widget */
 /* =========================================================== */
-/* ==========START STYLING FOR THE COURSES SECTIONS=========== */
+/* ==========START STYLING FOR THE COURSES PAGE=========== */
 /* =========================================================== */
 .courses {
     display: grid;
@@ -1225,5 +1225,91 @@ input.toggle-checkbox:checked + .toggle-switch {
     line-height: 1.5;
 }
 /* =========================================================== */
-/* ==========START STYLING FOR THE FRIENDS SECTIONS=========== */
+/* ==========START STYLING FOR THE FRIENDS PAGE=========== */
+/* =========================================================== */
+.friends {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .friends {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+.friends .friend-widget {
+    position: relative;
+}
+.friends .friend-widget .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.friends .friend-widget .contact a i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--main-transition);
+}
+.friends .friend-widget .contact a i:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.friends .friend-widget .head {
+    text-align: center;
+}
+.friends .friend-widget .head img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.friends .friend-widget .body {
+    position: relative;
+}
+.friends .friend-widget .body .vip {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: var(--red-color);
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0.1;
+}
+.friends .friend-widget .body ul li i {
+    width: 20px;
+}
+.friends .friend-widget .details {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* =========================================================== */
+/* ===========START STYLING FOR THE Files PAGE============ */
+/* =========================================================== */
+.files {
+    justify-content: space-between;
+    gap: 20px;
+}
+/* ------------------------------------------------ */
+/* Start Files Box */
+.files .files-box {
+    flex-basis: calc(100% - (25% + 20px));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+/* End Files Box */
+/* ------------------------------------------------ */
+/* Start Files Statistics */
+.files .files-stats {
+    flex-basis: 25%;
+}
+/* End Files Statistics */
+/* =========================================================== */
+/* ===========START STYLING FOR THE PLANS PAGE============ */
 /* =========================================================== */
