@@ -13,10 +13,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 *::-webkit-scrollbar {
-    color: var(--alt-color);
+    color: var(--main-color);
+    width: 15px;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: var(--alt-color) ;
+    background-color: var(--main-color) ;
 }
 *::-webkit-scrollbar-track {
     background-color: #fff ;
@@ -1295,19 +1296,73 @@ input.toggle-checkbox:checked + .toggle-switch {
     justify-content: space-between;
     gap: 20px;
 }
+@media (max-width: 767px) {
+    .files {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+}
 /* ------------------------------------------------ */
 /* Start Files Box */
 .files .files-box {
-    flex-basis: calc(100% - (25% + 20px));
+    width: calc(100% - 270px);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+}
+@media (max-width: 767px) {
+    .files .files-box {
+        width: 100%;
+        gap: 10px;
+    }
+}
+.files .files-box .file .type .image {
+    text-align: center;
+}
+.files .files-box .file .type .image img {
+    width: 65px;
+    transition: var(--main-transition);
+}
+.files .files-box .file:hover .type .image img {
+    transform: rotate(5deg);
 }
 /* End Files Box */
 /* ------------------------------------------------ */
 /* Start Files Statistics */
 .files .files-stats {
-    flex-basis: 25%;
+    width: 250px;
+    height: fit-content;
+}
+@media (max-width: 767px) {
+    .files .files-stats {
+        width: 100%;
+    }
+}
+.files .files-stats .stats-box {
+    border: 1px solid #eee;
+}
+.files .files-stats .stats-box .icon {
+    width: 40px;
+    height: 40px;
+}
+.files .files-stats .stats-box .text {
+    flex-grow: 1;
+}
+.files .files-stats .upload {
+    width: fit-content; 
+    margin: 0 auto;
+    cursor: pointer;
+}
+.files .files-stats .upload:hover {
+    background-color: var(--alt-color);
+}
+.files .files-stats .upload:hover i {
+    animation: upload 0.3s infinite alternate;
+}
+@keyframes upload {
+    to {
+        transform: translateY(-5px);
+    }
 }
 /* End Files Statistics */
 /* =========================================================== */

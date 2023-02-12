@@ -234,6 +234,9 @@
 .bg-clr-red {
     background-color: #f44336;
 } 
+.bg-clr-light-red {
+    background-color: #fdd9d7;
+}
 .bg-twitter {
     background-color: #0075ff;
 }
