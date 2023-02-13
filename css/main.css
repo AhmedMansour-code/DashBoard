@@ -1368,3 +1368,58 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* =========================================================== */
 /* ===========START STYLING FOR THE PLANS PAGE============ */
 /* =========================================================== */
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .plans {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+.plans .free .price {
+    border: 3px solid #fff;
+    outline: 3px solid var(--green-color);
+    text-align: center;
+}
+.plans .basic .price {
+    border: 3px solid #fff;
+    outline: 3px solid var(--main-color);
+    text-align: center;
+}
+.plans .premium .price {
+    border: 3px solid #fff;
+    outline: 3px solid var(--orange-color);
+    text-align: center;
+}
+.plans .plan-box .price p {
+    position: relative;
+    width: fit-content;
+    font-size: 40px;
+    margin: 10px auto 0;
+}
+.plans .plan-box .price p span {
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    font-size: 25px;
+}
+.plans .plan-box .options li .check {
+    width: 25px;
+    font-size: 18px;
+}
+.plans .plan-box .options li i:nth-of-type(2) {
+    cursor: pointer;
+}
+.plans .plan-box .options li p {
+    flex-grow: 1;
+    font-size: 15px;
+}
+.plans .plan-box .join {
+    width: fit-content;
+}
+.plans .plan-box .active {
+    text-align: center;
+}
