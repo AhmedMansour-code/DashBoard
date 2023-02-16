@@ -996,6 +996,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 @media (max-width: 767px) {
     .profile-widget {
         flex-direction: column;
+        margin-bottom: 10px;
     }
 }
 /* --------------------------------------- */
@@ -1043,6 +1044,12 @@ input.toggle-checkbox:checked + .toggle-switch {
 .profile-widget .info {
     width: 100%;
 }
+.profile-widget .info .info-box {
+    transition: var(--main-transition);
+}
+.profile-widget .info .info-box:hover {
+    background-color: #f9f9f9;
+}
 .profile-widget .info .data {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
@@ -1068,6 +1075,11 @@ input.toggle-checkbox:checked + .toggle-switch {
 .profile-page .skills-activities {
     gap: 20px;
     flex-wrap: wrap;
+}
+@media (Max-width: 767px) {
+    .profile-page .skills-activities {
+        gap: 10px;
+    }
 }
 /* -------------------------------------------- */
 /* Start My Skills Widget */
@@ -1108,6 +1120,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 .profile-page .activities .activity-box img {
     width: 60px;
+    border-radius: 50%;
 }
 .profile-page .activities .activity-box .text {
     flex-grow: 1;
@@ -1205,6 +1218,7 @@ input.toggle-checkbox:checked + .toggle-switch {
     width: 65px;
     border: 2px solid #fff;
     border-radius: 50%;
+    z-index: 100;
 }
 .courses .course-widget .text {
     position: relative;
@@ -1295,25 +1309,26 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* =========================================================== */
 .files {
     justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
 }
 @media (max-width: 767px) {
     .files {
         flex-direction: column-reverse;
+        align-items: normal;
         gap: 10px;
     }
 }
 /* ------------------------------------------------ */
 /* Start Files Box */
 .files .files-box {
-    width: calc(100% - 270px);
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 @media (max-width: 767px) {
     .files .files-box {
-        width: 100%;
         gap: 10px;
     }
 }
@@ -1332,7 +1347,6 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* Start Files Statistics */
 .files .files-stats {
     width: 250px;
-    height: fit-content;
 }
 @media (max-width: 767px) {
     .files .files-stats {
