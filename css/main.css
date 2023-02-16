@@ -1172,6 +1172,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 @media (max-width: 767px) {
     .project-widget .rating {
         flex-direction: column;
+        gap: 20px;
     }
 }
 .project-widget .rating .progress-bar {
@@ -1299,7 +1300,6 @@ input.toggle-checkbox:checked + .toggle-switch {
 @media (max-width: 767px) {
     .files {
         flex-direction: column-reverse;
-        gap: 10px;
     }
 }
 /* ------------------------------------------------ */
