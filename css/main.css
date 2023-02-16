@@ -1299,7 +1299,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 @media (max-width: 767px) {
     .files {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 10px;
     }
 }
