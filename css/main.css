@@ -1310,11 +1310,12 @@ input.toggle-checkbox:checked + .toggle-switch {
 .files {
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: row-reverse;
     gap: 20px;
 }
 @media (max-width: 767px) {
     .files {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: normal;
         gap: 10px;
     }
