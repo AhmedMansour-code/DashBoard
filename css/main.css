@@ -205,7 +205,6 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 .side-bar ul li a {
     color: #000;
-    font-size: 15px;
     display: block;
     padding: 10px;
     border-radius: 7px;
@@ -224,7 +223,6 @@ input.toggle-checkbox:checked + .toggle-switch {
     }
 }
 .side-bar ul li i {
-    font-size: 14px;
     margin-right: 5px;
     width: 15px;
 }
@@ -243,8 +241,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 .main .header {
     padding: 10px 20px;
     min-height: 67px;
-    background-color: #fff;
-    box-shadow: -1px 0 8px -4px #aaa;
+    background-color: #fff; 
 }
 @media (max-width:767px) {
     .main .header {
@@ -259,13 +256,13 @@ input.toggle-checkbox:checked + .toggle-switch {
 .main .header .search i {
     margin-top: 1px;
     margin-right: 5px;
-    color: #777;
+    color: gray;
     font-size: 14px;
 }
 .main .header .search input {
     border: none;
     font-size: 13px;
-    width: 115px;
+    width: 120px;
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
     -o-transition: var(--main-transition);
@@ -981,6 +978,9 @@ input.toggle-checkbox:checked + .toggle-switch {
     border: 2px solid #eee;
     border-radius: 6px;
     cursor: pointer;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .main .content .backup-manager .servers .serv-box input[type=radio]:checked + label {
@@ -1019,6 +1019,10 @@ input.toggle-checkbox:checked + .toggle-switch {
     background-color: #eee;
     right: 0;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 @media (max-width: 767px) {
@@ -1045,6 +1049,9 @@ input.toggle-checkbox:checked + .toggle-switch {
     width: 100%;
 }
 .profile-widget .info .info-box {
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .profile-widget .info .info-box:hover {
@@ -1229,6 +1236,10 @@ input.toggle-checkbox:checked + .toggle-switch {
     position: absolute;
     bottom: 0;
     left: 50%;
+    -webkit-transform: translate(-50% , 50%);
+    -ms-transform: translate(-50% , 50%);
+    -moz-transform: translate(-50% , 50%);
+    -o-transform: translate(-50% , 50%);
     transform: translate(-50% , 50%);
     font-size: 13px;
     padding: 5px 10px;
@@ -1270,6 +1281,9 @@ input.toggle-checkbox:checked + .toggle-switch {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .friends .friend-widget .contact a i:hover {
@@ -1291,6 +1305,10 @@ input.toggle-checkbox:checked + .toggle-switch {
     position: absolute;
     top: 50%;
     right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     color: var(--red-color);
     font-size: 40px;
@@ -1308,6 +1326,7 @@ input.toggle-checkbox:checked + .toggle-switch {
 /* ===========START STYLING FOR THE Files PAGE============ */
 /* =========================================================== */
 .files {
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row-reverse;
@@ -1338,9 +1357,16 @@ input.toggle-checkbox:checked + .toggle-switch {
 }
 .files .files-box .file .type .image img {
     width: 65px;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     transition: var(--main-transition);
 }
 .files .files-box .file:hover .type .image img {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
     transform: rotate(5deg);
 }
 /* End Files Box */
@@ -1373,10 +1399,17 @@ input.toggle-checkbox:checked + .toggle-switch {
     background-color: var(--alt-color);
 }
 .files .files-stats .upload:hover i {
+    -webkit-animation: upload 0.3s infinite alternate;
+    -o-animation: upload 0.3s infinite alternate;
+    -moz-animation: upload 0.3s infinite alternate;
     animation: upload 0.3s infinite alternate;
 }
 @keyframes upload {
     to {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
         transform: translateY(-5px);
     }
 }
@@ -1439,3 +1472,4 @@ input.toggle-checkbox:checked + .toggle-switch {
 .plans .plan-box .active {
     text-align: center;
 }
+/* =========================================================== */
