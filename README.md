@@ -2,7 +2,7 @@
 HTML & CSS Website Template 4
 ,,,
 
-## important Files
+## Important Files
 * HTML Files
 * Main CSS File
 * FrameWork-File.css [Using customized classes to creat a personal franwork]
