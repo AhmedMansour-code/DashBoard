@@ -15,12 +15,11 @@ Template Design by Osama Elzero , coding from scratch by myself.
 Project is created with:
 * Visual Studio Code
 	
-```
-## Link To View The Template
 
+## Link To view The DashBoard
+	
 https://ahmedmansour-code.github.io/DashBoard/
 
-```
 
 ## Criedt 
 
