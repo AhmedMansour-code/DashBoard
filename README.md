@@ -16,8 +16,7 @@ Project is created with:
 * Visual Studio Code
 	
 ```
-## Setup
-Link To View The Template :
+## Link To View The Template
 
 https://ahmedmansour-code.github.io/DashBoard/
 
