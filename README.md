@@ -2,6 +2,13 @@
 HTML & CSS Website Template 4
 ,,,
 
+## Table of contents
+* [Important Files](important-files)
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Link To view The DashBoard](link-to-view-dashboard)
+* [Credit](credit)
+
 ## Important Files
 * HTML Files
 * Main CSS File
@@ -21,9 +28,9 @@ Project is created with:
 https://ahmedmansour-code.github.io/DashBoard/
 
 
-## Criedt 
+## Credit 
 
-Criedt goes to Eng. Osama Elzero I have learned all the skills from his website and Youtube Channel.
+Credit goes to Eng. Osama Elzero I have learned all the skills from his website and Youtube Channel.
 
 Website : Elzero.org / or google Elzero Academy
 
