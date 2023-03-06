@@ -1,6 +1,6 @@
 # Website_Template_4
 HTML & CSS Website Template 4
-,,,
+
 
 ## Table of contents
 * [Important Files](important-files)
